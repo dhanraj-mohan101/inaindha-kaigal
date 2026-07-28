@@ -18,16 +18,13 @@ window.addEventListener("scroll", function () {
 /* ===========================
    Mobile Menu
 =========================== */
-
 const menu = document.querySelector(".menu");
+const nav = document.querySelector("header nav");
 
-const nav = document.querySelector("nav");
-
-menu.addEventListener("click", function () {
-
+menu.addEventListener("click", () => {
     nav.classList.toggle("active");
-
 });
+
 
 /* ===========================
    Hero Slider
