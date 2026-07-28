@@ -1616,7 +1616,7 @@ body.dark .theme-btn {
       Active Navigation
 ====================================*/
 
-nav a.active {
+/* nav a.active {
 
     color: #0d6efd;
 
@@ -1674,7 +1674,7 @@ section h2::after {
 
     border-radius: 20px;
 
-}
+} */
 
 /*====================================
         Upcoming Trips
