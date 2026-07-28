@@ -28,26 +28,29 @@ if (menu && nav) {
 /* ===========================
    Hero Slider
 =========================== */
+document.querySelectorAll("nav a").forEach(link => {
 
-const slides = document.querySelectorAll(".slide");
+    link.addEventListener("click", function (e) {
 
-if (slides.length > 0) {
+        e.preventDefault();
 
-    let currentSlide = 0;
+        const target = document.querySelector(this.getAttribute("href"));
 
-    function changeSlide() {
+        if (target) {
 
-        slides[currentSlide].classList.remove("active");
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
 
-        currentSlide = (currentSlide + 1) % slides.length;
+            // Mobile menu close
+            if (nav.classList.contains("active")) {
+                nav.classList.remove("active");
+            }
+        }
 
-        slides[currentSlide].classList.add("active");
+    });
 
-    }
-
-    setInterval(changeSlide, 5000);
-
-}
+});
 
 /* ===========================
    Smooth Scroll
