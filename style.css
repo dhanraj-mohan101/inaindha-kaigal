@@ -1420,8 +1420,8 @@ body.dark .theme-btn {
 
     z-index: 99999;
 
-    transition: opacity .6s ease,
-        visibility .6s ease;
+    transition: opacity .3s ease,
+        visibility .3s ease;
 
 }
 
