@@ -297,7 +297,7 @@ window.addEventListener("load", function () {
     if (loader) {
         setTimeout(() => {
             loader.classList.add("hide");
-        }, 800);
+        }, 500);
     }
 
 });
