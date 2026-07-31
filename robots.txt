@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dhanraj-mohan101.github.io/inaindha-kaigal/sitemap.xml
+Sitemap: https://inaindhakaigal.in/sitemap.xml
