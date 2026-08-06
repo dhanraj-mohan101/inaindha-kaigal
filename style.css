@@ -522,6 +522,14 @@ nav a:hover {
     font-size: 18px;
 }
 
+.trips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 50px;
+    font-weight: bold;
+}
+
 /*==========================
       Gallery
 ==========================*/
