@@ -102,30 +102,30 @@ nav a:hover {
 }
 
 /* =========================
-   Hero Section
+   HERO SECTION
 ========================= */
 
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
-/* Slider */
+/* =========================
+   SLIDER
+========================= */
 
 .slider {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
 }
 
 .slide {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -143,124 +143,276 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
-/* Overlay */
+/* =========================
+   DARK OVERLAY
+========================= */
 
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, .45);
+    background: rgba(0, 0, 0, 0.45);
     z-index: 2;
 }
 
-/* Hero Content */
+/* =========================
+   HERO CONTENT
+========================= */
 
 .hero-content {
     position: relative;
     z-index: 3;
-    height: 100%;
+
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
     color: #fff;
-    padding: 20px;
+
+    padding: 120px 8% 60px;
 }
+
+/* Main Heading */
 
 .hero-content h1 {
-    font-size: 65px;
-    margin-bottom: 20px;
+    max-width: 1100px;
+
+    font-size: 60px;
+    line-height: 1.2;
+
+    margin: 0 0 20px;
+
+    font-weight: 700;
 }
 
+/* Sub Heading */
+
 .hero-content h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    max-width: 900px;
+
+    font-size: 30px;
+    line-height: 1.4;
+
+    margin: 0 0 20px;
+
     font-weight: 500;
 }
 
+/* Description */
+
 .hero-content p {
-    font-size: 20px;
+    max-width: 850px;
+
+    font-size: 19px;
     line-height: 1.8;
-    margin-bottom: 35px;
+
+    margin: 0 0 35px;
+
+    color: #fff;
 }
 
-/* Buttons */
+/* =========================
+   HERO BUTTONS
+========================= */
 
 .hero-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
+
     gap: 20px;
-    flex-wrap: wrap;
+
+    width: 100%;
 }
 
-.btn,
-.btn2 {
-    text-decoration: none;
-    padding: 15px 35px;
+/* Common Button */
+
+.hero-buttons a {
+    display: inline-block;
+
+    min-width: 210px;
+
+    padding: 15px 30px;
+
     border-radius: 50px;
+
+    text-decoration: none;
+
     color: #fff;
+
     font-size: 17px;
     font-weight: 600;
-    transition: .3s;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
 }
 
-.btn {
+/* Book Button */
+
+.hero-buttons .btn {
     background: #0d6efd;
 }
 
-.btn:hover {
+.hero-buttons .btn:hover {
     background: #0b5ed7;
+    transform: translateY(-3px);
 }
 
-.btn2 {
-    background: #25D366;
+/* Gallery Button */
+
+.hero-buttons .btn2 {
+    background: #25d366;
 }
 
-.btn2:hover {
-    background: #128C7E;
+.hero-buttons .btn2:hover {
+    background: #128c7e;
+    transform: translateY(-3px);
 }
 
-/* Responsive */
 
-@media(max-width:768px) {
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
 
     .hero {
-        height: 70vh;
+        min-height: 760px;
+        height: auto;
+    }
+
+    .slider {
+        height: 100%;
+    }
+
+    .slide {
+        height: 100%;
     }
 
     .slide img {
         width: 100%;
         height: 100%;
+
         object-fit: cover;
+        object-position: center;
+    }
+
+    /* Hero Content */
+
+    .hero-content {
+        min-height: 760px;
+
+        justify-content: flex-start;
+
+        padding: 180px 20px 60px;
+    }
+
+    /* Heading */
+
+    .hero-content h1 {
+        max-width: 100%;
+
+        font-size: 34px;
+        line-height: 1.25;
+
+        margin-bottom: 15px;
+    }
+
+    /* Sub Heading */
+
+    .hero-content h2 {
+        max-width: 100%;
+
+        font-size: 20px;
+        line-height: 1.45;
+
+        margin-bottom: 15px;
+    }
+
+    /* Description */
+
+    .hero-content p {
+        max-width: 100%;
+
+        font-size: 15px;
+        line-height: 1.7;
+
+        margin-bottom: 30px;
+    }
+
+    /* Buttons */
+
+    .hero-buttons {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        display: block;
+
+        width: 240px;
+        min-width: 240px;
+
+        padding: 14px 20px;
+
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 780px;
+    }
+
+    .hero-content {
+        min-height: 780px;
+
+        padding: 170px 18px 50px;
     }
 
     .hero-content h1 {
-        font-size: 38px;
+        font-size: 29px;
+        line-height: 1.25;
     }
 
     .hero-content h2 {
-        font-size: 22px;
+        font-size: 18px;
+        line-height: 1.4;
     }
 
     .hero-content p {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.7;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+    .hero-buttons a {
+        width: 230px;
+        min-width: 230px;
     }
-
-    .btn,
-    .btn2 {
-        width: 220px;
-    }
-
 }
-
 /* ===========================
    Responsive
 =========================== */
