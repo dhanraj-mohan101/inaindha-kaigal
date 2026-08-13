@@ -1148,6 +1148,15 @@ nav a:hover {
 
 }
 
+.payment-box img {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
 .payment-container h3 {
     margin-bottom: 15px;
 
@@ -1170,6 +1179,13 @@ nav a:hover {
 
     border-radius: 30px;
 
+}
+
+@media (max-width: 768px) {
+    .payment-box img {
+        width: 220px;
+        height: auto;
+    }
 }
 
 /* ==========================
