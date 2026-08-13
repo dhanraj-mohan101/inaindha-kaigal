@@ -439,30 +439,89 @@ nav a:hover {
     .menu {
         display: block;
     }
+}
+
+/* =========================
+   MOBILE HERO OPTIMIZATION
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 760px;
+    }
+
+    .hero-content {
+        min-height: 760px;
+        padding: 170px 20px 50px;
+    }
 
     .hero-content h1 {
-        font-size: 38px;
+        max-width: 100%;
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 12px;
     }
 
     .hero-content h2 {
-        font-size: 22px;
+        max-width: 100%;
+        font-size: 19px;
+        line-height: 1.4;
+        margin-bottom: 12px;
     }
 
     .hero-content p {
-        font-size: 16px;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 25px;
     }
 
-    .hero-btns {
+    .hero-buttons {
         flex-direction: column;
-        align-items: center;
+        gap: 12px;
     }
 
-    .btn,
-    .btn2 {
+    .hero-buttons a {
+        width: 230px;
+        min-width: 230px;
+        padding: 13px 20px;
+        font-size: 15px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 760px;
+    }
+
+    .hero-content {
+        min-height: 760px;
+        padding: 165px 18px 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .hero-content h2 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons a {
         width: 220px;
-        text-align: center;
+        min-width: 220px;
     }
-
 }
 
 /* Back To Top */
