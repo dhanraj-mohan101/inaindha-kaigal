@@ -384,33 +384,32 @@ nav a:hover {
 @media (max-width: 480px) {
 
     .hero {
-        min-height: 780px;
+        min-height: 760px;
     }
 
     .hero-content {
-        min-height: 780px;
-
-        padding: 170px 18px 50px;
+        min-height: 760px;
+        padding: 165px 18px 45px;
     }
 
     .hero-content h1 {
-        font-size: 30px;
-        line-height: 1.25;
+        font-size: 28px;
+        line-height: 1.2;
     }
 
     .hero-content h2 {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.4;
     }
 
     .hero-content p {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 1.6;
     }
 
     .hero-buttons a {
-        width: 230px;
-        min-width: 230px;
+        width: 220px;
+        min-width: 220px;
     }
 }
 /* ===========================
@@ -489,41 +488,6 @@ nav a:hover {
         font-size: 15px;
     }
 }
-
-/* Small Mobile */
-
-@media (max-width: 480px) {
-
-    .hero {
-        min-height: 760px;
-    }
-
-    .hero-content {
-        min-height: 760px;
-        padding: 165px 18px 45px;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-        line-height: 1.2;
-    }
-
-    .hero-content h2 {
-        font-size: 17px;
-        line-height: 1.4;
-    }
-
-    .hero-content p {
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-    .hero-buttons a {
-        width: 220px;
-        min-width: 220px;
-    }
-}
-
 /* Back To Top */
 
 #topBtn {
