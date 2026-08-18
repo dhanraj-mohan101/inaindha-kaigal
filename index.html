@@ -29,14 +29,7 @@
 
         document.head.appendChild(script);
     }
-
-    /* Load GTM after page load */
-    window.addEventListener('load', function () {
-
-        setTimeout(loadGTM, 3000);
-
-    });
-
+    
     /* Load immediately when user interacts */
     ['click', 'scroll', 'touchstart'].forEach(function (event) {
 
