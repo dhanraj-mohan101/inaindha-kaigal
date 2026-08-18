@@ -1388,7 +1388,11 @@ footer {
     color: #bbb;
 
 }
-
+.wa-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
 /*==========================
       Floating WhatsApp
 ==========================*/
