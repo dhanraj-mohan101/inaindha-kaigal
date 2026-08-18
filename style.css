@@ -1437,31 +1437,48 @@ footer {
 
 }
 
-/*==========================
-      Back To Top
-==========================*/
+/* Back To Top Button */
 
 #topBtn {
     display: none;
     position: fixed;
-    bottom: 40px;
+    bottom: 30px;
     right: 25px;
+
     width: 50px;
     height: 50px;
+
     border: none;
     border-radius: 50%;
-    background: #fd0d0d;
-    color: #fff;
-    font-size: 22px;
+
+    background: #ff1717;
     cursor: pointer;
-    z-index: 9999;
-    transition: .3s;
+
+    z-index: 99999;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Arrow */
+#topBtn::before {
+    content: "";
+
+    position: absolute;
+    top: 19px;
+    left: 17px;
+
+    width: 14px;
+    height: 14px;
+
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+
+    transform: rotate(45deg);
 }
 
 #topBtn:hover {
     background: #198754;
 }
-
 /* ==========================
       FAQ Section
 ========================== */
