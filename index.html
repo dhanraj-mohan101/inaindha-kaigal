@@ -109,8 +109,16 @@
     as="image"
     href="images/hero1.webp"
     fetchpriority="high">
+    
+  <link rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    
+<noscript>
     <link rel="stylesheet" href="style.css">
-
+</noscript>
+    
     <!-- Organization Schema -->
  <script type="application/ld+json">
 {
