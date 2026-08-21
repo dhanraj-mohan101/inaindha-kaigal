@@ -146,6 +146,20 @@ nav a:hover {
     object-position: center;
     display: block;
 }
+
+.slide picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slide picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 /* =========================
    DARK OVERLAY
 ========================= */
