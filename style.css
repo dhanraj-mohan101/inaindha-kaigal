@@ -2367,3 +2367,29 @@ section h2::after {
         margin: 10px auto;
     }
 }
+/* Aanakatti Hero Image */
+
+.aanakatti-hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)),
+        url("images/gallery2.webp") top / cover no-repeat;
+}
+
+/* Marayoor Hero Image */
+
+.marayoor-hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)),
+        url("images/gallery7.webp") top / cover no-repeat;
+}
+
+/* Kanthaloor Hero Image */
+
+.kanthaloor-hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)),
+        url("images/gallery5.webp") center / cover no-repeat;
+}
