@@ -2073,3 +2073,297 @@ section h2::after {
     }
 
 } */
+/* =========================
+   WAYANAD TRIP PAGE
+========================= */
+
+.trip-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 6%;
+    background: #ffffff;
+}
+
+.trip-logo img {
+    display: block;
+    object-fit: contain;
+}
+
+.back-home {
+    text-decoration: none;
+    font-weight: 600;
+    color: #222;
+}
+
+.trip-hero {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)),
+        url("images/gallery4.webp") center / cover no-repeat;
+}
+
+.trip-hero-content {
+    max-width: 800px;
+    color: #ffffff;
+}
+
+.trip-hero-content h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.trip-hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.trip-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #222;
+}
+
+.trip-brand h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.trip-brand p {
+    margin: 3px 0 0;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+
+    .trip-page-header {
+        padding: 10px 20px;
+    }
+
+    .trip-brand h2 {
+        font-size: 17px;
+    }
+
+    .trip-brand p {
+        font-size: 10px;
+    }
+
+    .back-home {
+        font-size: 13px;
+    }
+
+    .trip-hero {
+        min-height: 60vh;
+    }
+
+    .trip-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .trip-hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* Wayanad Trip About Section */
+
+.trip-about {
+    padding: 70px 20px;
+    background: #ffffff;
+}
+
+.trip-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.trip-about h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.trip-about p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .trip-about {
+        padding: 45px 20px;
+    }
+
+    .trip-about h2 {
+        font-size: 26px;
+    }
+
+    .trip-about p {
+        font-size: 16px;
+    }
+}
+
+/* Wayanad Trip Gallery */
+
+.trip-gallery {
+    padding: 70px 20px;
+}
+
+.trip-gallery h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.trip-gallery-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.trip-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.trip-gallery-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .trip-gallery {
+        padding: 45px 20px;
+    }
+
+    .trip-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-gallery-grid img {
+        height: 260px;
+    }
+}
+
+/* Wayanad Trip Highlights */
+
+.trip-highlights {
+    padding: 70px 20px;
+    background: #f7f7f7;
+}
+
+.trip-highlights h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.highlight-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.highlight-card h3 {
+    margin-bottom: 12px;
+}
+
+.highlight-card p {
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-highlights {
+        padding: 45px 20px;
+    }
+}
+
+/* =========================
+   TRIP PAGE CTA
+========================= */
+
+.trip-cta {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.trip-cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.trip-cta p {
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.trip-cta-btn,
+.trip-home-link {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.trip-cta-btn {
+    background: #222;
+    color: #fff;
+}
+
+.trip-home-link {
+    border: 1px solid #222;
+    color: #222;
+}
+
+/* Trip Page Footer */
+
+.trip-footer {
+    padding: 20px;
+    text-align: center;
+    background: #222;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+
+    .trip-cta {
+        padding: 45px 20px;
+    }
+
+    .trip-cta h2 {
+        font-size: 26px;
+    }
+
+    .trip-cta-btn,
+    .trip-home-link {
+        display: block;
+        max-width: 280px;
+        margin: 10px auto;
+    }
+}
