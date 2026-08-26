@@ -388,3 +388,49 @@ function changeTestimonial() {
 if (testimonials.length > 0) {
     setInterval(changeTestimonial, 5000);
 }
+/* =========================
+   Upcoming Trip Countdown
+========================= */
+
+const countdownElement = document.getElementById("countdown");
+
+const tripDate = new Date("October 2, 2026 00:00:00").getTime();
+
+const countdownTimer = setInterval(function () {
+
+    const now = new Date().getTime();
+
+    const distance = tripDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) /
+        1000
+    );
+
+    countdownElement.innerHTML =
+        days + " Days " +
+        hours + " Hours " +
+        minutes + " Minutes " +
+        seconds + " Seconds";
+
+    if (distance < 0) {
+
+        clearInterval(countdownTimer);
+
+        countdownElement.innerHTML = "Trip Started 🎉";
+
+    }
+
+}, 1000);
