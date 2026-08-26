@@ -2393,3 +2393,91 @@ section h2::after {
             rgba(0, 0, 0, 0.55)),
         url("images/gallery5.webp") center / cover no-repeat;
 }
+/* =========================
+   UPCOMING TRIP SECTION
+========================= */
+
+.upcoming-trip {
+    padding: 70px 20px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.upcoming-trip-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.upcoming-trip h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.upcoming-trip h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.trip-date {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.upcoming-trip-container > p {
+    line-height: 1.7;
+}
+
+.trip-countdown {
+    margin: 30px auto;
+}
+
+.trip-countdown h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#countdown {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 18px 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.upcoming-trip-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: #222;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .upcoming-trip {
+        padding: 45px 20px;
+    }
+
+    .upcoming-trip h2 {
+        font-size: 27px;
+    }
+
+    .upcoming-trip h3 {
+        font-size: 21px;
+    }
+
+    .trip-date {
+        font-size: 16px;
+    }
+
+    #countdown {
+        font-size: 18px;
+    }
+}
