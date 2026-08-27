@@ -80,7 +80,9 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -89,10 +91,15 @@ nav a {
     font-size: 20px;
     font-weight: 500;
     transition: .3s;
+    white-space: nowrap;
 }
 
 nav a:hover {
     color: #0d6efd;
+}
+
+nav a[href="#upcoming-trip"] {
+    order: 2;
 }
 
 .menu {
@@ -154,12 +161,13 @@ nav a:hover {
 }
 
 .slide picture img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    display: block;
 }
+
 /* =========================
    DARK OVERLAY
 ========================= */
@@ -393,7 +401,6 @@ nav a:hover {
 /* =========================
    SMALL MOBILE
 ========================= */
-
 @media (max-width: 480px) {
 
     .hero {
@@ -425,6 +432,8 @@ nav a:hover {
         min-width: 220px;
     }
 }
+
+
 /* ===========================
    Responsive
 =========================== */
@@ -451,6 +460,7 @@ nav a:hover {
     .menu {
         display: block;
     }
+
 }
 
 /* =========================
@@ -501,6 +511,7 @@ nav a:hover {
         font-size: 15px;
     }
 }
+
 /* Back To Top */
 
 #topBtn {
@@ -1401,11 +1412,14 @@ footer {
     color: #bbb;
 
 }
+
 .wa-icon {
     width: 30px;
     height: 30px;
     display: block;
 }
+
+
 /*==========================
       Floating WhatsApp
 ==========================*/
@@ -1492,6 +1506,7 @@ footer {
 #topBtn:hover {
     background: #198754;
 }
+
 /* ==========================
       FAQ Section
 ========================== */
@@ -1699,7 +1714,7 @@ body.dark .theme-btn {
 
 }
 
-.loader-box h2{
+.loader-box h2 {
     color: #0b5ed7;
 }
 
@@ -2169,6 +2184,7 @@ body.dark .theme-btn {
         margin: 10px auto;
     }
 }
+
 /* Aanakatti Hero Image */
 
 .aanakatti-hero {
@@ -2195,6 +2211,7 @@ body.dark .theme-btn {
             rgba(0, 0, 0, 0.55)),
         url("images/gallery5.webp") center / cover no-repeat;
 }
+
 /* =========================
    UPCOMING TRIP SECTION
 ========================= */
@@ -2226,7 +2243,7 @@ body.dark .theme-btn {
     margin-bottom: 15px;
 }
 
-.upcoming-trip-container > p {
+.upcoming-trip-container>p {
     line-height: 1.7;
 }
 
@@ -2253,15 +2270,14 @@ body.dark .theme-btn {
     border-radius: 12px;
     min-width: 110px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
-cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .countdown-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
-       background-color:antiquewhite;
-
+    background-color: antiquewhite;
 }
 
 .countdown-box span {
@@ -2275,6 +2291,7 @@ cursor: pointer;
     margin-top: 5px;
     font-size: 16px;
 }
+
 .upcoming-trip-btn {
     display: inline-block;
     padding: 12px 24px;
@@ -2284,6 +2301,7 @@ cursor: pointer;
     text-decoration: none;
     font-weight: 600;
 }
+
 .upcoming-trip-price {
     display: inline-block;
     margin: 20px 0;
@@ -2323,3 +2341,38 @@ cursor: pointer;
         font-size: 18px;
     }
 }
+
+.upcoming-nav {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+    transition: 0.3s;
+    position: absolute;
+    top: 78px;
+    left: 57%;
+    transform: translateX(-50%);
+}
+
+.upcoming-nav:hover {
+    color: #0d6efd;
+    transform: translateX(-50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+    .upcoming-nav {
+        position: static;
+        display: block;
+        transform: none;
+        text-align: center;
+        width: 100%;
+        margin: 8px 0;
+        font-size: 17px;
+    }
+
+}
+
