@@ -419,11 +419,10 @@ const countdownTimer = setInterval(function () {
         1000
     );
 
-    countdownElement.innerHTML =
-        days + " Days " +
-        hours + " Hours " +
-        minutes + " Minutes " +
-        seconds + " Seconds";
+  document.getElementById("days").textContent = days;
+document.getElementById("hours").textContent = hours;
+document.getElementById("minutes").textContent = minutes;
+document.getElementById("seconds").textContent = seconds;
 
     if (distance < 0) {
 
