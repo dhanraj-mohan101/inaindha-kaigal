@@ -2438,15 +2438,41 @@ section h2::after {
 }
 
 #countdown {
-    font-size: 24px;
-    font-weight: 700;
-    padding: 18px 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    max-width: 600px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px auto;
 }
 
+.countdown-box {
+    background: #ffffff;
+    padding: 15px 10px;
+    border-radius: 12px;
+    min-width: 110px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+}
+
+.countdown-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+       background-color:antiquewhite;
+
+}
+
+.countdown-box span {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.countdown-box small {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+}
 .upcoming-trip-btn {
     display: inline-block;
     padding: 12px 24px;
