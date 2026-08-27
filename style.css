@@ -2482,6 +2482,20 @@ cursor: pointer;
     text-decoration: none;
     font-weight: 600;
 }
+.upcoming-trip-price {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-trip-price strong {
+    font-size: 20px;
+}
 
 /* Mobile */
 
