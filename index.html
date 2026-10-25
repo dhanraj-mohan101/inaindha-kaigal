@@ -5,46 +5,46 @@
 
     <meta charset="UTF-8">
 
-<!-- Google Tag Manager - Delayed Load -->
-<script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Google Tag Manager - Delayed Load -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function loadGTM() {
+        function loadGTM() {
 
-        if (window.gtmLoaded) return;
+            if (window.gtmLoaded) return;
 
-        window.gtmLoaded = true;
+            window.gtmLoaded = true;
 
-        window.dataLayer.push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
+            window.dataLayer.push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+
+            var script = document.createElement('script');
+
+            script.async = true;
+
+            script.src =
+                'https://www.googletagmanager.com/gtm.js?id=GTM-MT3S9FWX';
+
+            document.head.appendChild(script);
+        }
+
+        /* Load immediately when user interacts */
+        ['click', 'touchstart', 'keydown'].forEach(function (event) {
+
+            window.addEventListener(
+                event,
+                loadGTM,
+                {
+                    once: true,
+                    passive: true
+                }
+            );
+
         });
-
-        var script = document.createElement('script');
-
-        script.async = true;
-
-        script.src =
-            'https://www.googletagmanager.com/gtm.js?id=GTM-MT3S9FWX';
-
-        document.head.appendChild(script);
-    }
-    
-    /* Load immediately when user interacts */
-  ['click', 'touchstart', 'keydown'].forEach(function (event) {
-
-        window.addEventListener(
-            event,
-            loadGTM,
-            {
-                once: true,
-                passive: true
-            }
-        );
-
-    });
-</script>
-<!-- End Google Tag Manager -->
+    </script>
+    <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -80,54 +80,37 @@
     <!-- <link rel="icon" href="images/favicon.png"> -->
 
     <!-- External CSS -->
- <link rel="preload"
-      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.4/dist/aos.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
 
-<noscript>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-</noscript>
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    </noscript>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-   <link rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-<noscript>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-</noscript>
-    
-<!-- Preload LCP Hero Image -->
-<link
-    rel="preload"
-    as="image"
-    href="images/hero1-mobile.webp"
-    media="(max-width: 768px)"
-    fetchpriority="high">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    </noscript>
 
-<link
-    rel="preload"
-    as="image"
-    href="images/hero1.webp"
-    media="(min-width: 769px)"
-    fetchpriority="high">
-    
-  <link rel="preload"
-      href="style.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-    
-<noscript>
-    <link rel="stylesheet" href="style.css">
-</noscript>
-    
+    <!-- Preload LCP Hero Image -->
+    <link rel="preload" as="image" href="images/hero1-mobile.webp" media="(max-width: 768px)" fetchpriority="high">
+
+    <link rel="preload" as="image" href="images/hero1.webp" media="(min-width: 769px)" fetchpriority="high">
+
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+    </noscript>
+
     <!-- Organization Schema -->
- <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -136,7 +119,7 @@
   "url": "https://inaindhakaigal.in/",
   "logo": "https://inaindhakaigal.in/images/logo.webp",
   "description": "Travel Together | Create Memories",
- "areaServed": [
+  "areaServed": [
   {
     "@type": "City",
     "name": "Pollachi"
@@ -155,7 +138,9 @@
   }
 ]
 }
-</script>    <!-- WebSite Schema -->
+</script>
+
+    <!-- WebSite Schema -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -236,12 +221,11 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT3S9FWX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT3S9FWX" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
     <!-- ===========================
       Website Loader
 =========================== -->
@@ -250,12 +234,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
         <div class="loader-box">
 
-           <img src="images/logo.webp"
-     alt="Inaindha Kaigal"
-     width="120"
-     height="120"
-     decoding="async">
-             <h2>Inaindha Kaigal</h2>
+            <img src="images/logo.webp" alt="Inaindha Kaigal" width="120" height="120" decoding="async">
+            <h2>Inaindha Kaigal</h2>
 
             <div class="spinner"></div>
 
@@ -273,11 +253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
         <div class="logo">
 
-          <img src="images/logo.webp"
-     alt="Inaindha Kaigal"
-     width="70"
-     height="70"
-     decoding="async">
+            <img src="images/logo.webp" alt="Inaindha Kaigal" width="70" height="70" decoding="async">
 
             <div>
                 <h2>Inaindha Kaigal</h2>
@@ -294,7 +270,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
             <a href="#why-us">Why Choose Us</a>
 
-            <a href="#gallery">Gallery</a>
+            <a href="./gallery.html" onclick="window.location.href='./gallery.html'; return false;">
+                Gallery
+            </a>
 
             <a href="#booking">Booking</a>
 
@@ -303,38 +281,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
                 🌙
             </button>
+
         </nav>
-        
+
         <a href="#upcoming-trip" class="upcoming-nav">🌴Upcoming Trip</a>
 
-     <button class="menu" aria-label="Open navigation menu">
-    ☰
-</button>
+        <button class="menu" aria-label="Open navigation menu">
+            ☰
+        </button>
 
     </header>
 
-     <!-- ===========================
+    <!-- ===========================
      Hero Section
 =========================== -->
 
     <section class="hero" id="home">
 
-          <!-- Slider -->
+        <!-- Slider -->
         <div class="slider">
 
             <!-- Hero Image 1 -->
-         
             <div class="slide active">
-    <img
-        src="images/hero1-mobile.webp"
-        alt="Inaindha Kaigal group trip travel experience"
-        width="800"
-        height="427"
-        fetchpriority="high"
-        loading="eager"
-        decoding="async">
-</div>
-            
+                <img src="images/hero1-mobile.webp" alt="Inaindha Kaigal group trip travel experience" width="800"
+                    height="427" fetchpriority="high" loading="eager" decoding="async">
+            </div>
+
             <!-- Hero Image 2 -->
             <div class="slide">
                 <img src="images/hero2.webp" alt="Inaindha Kaigal group travel in South India" width="1717" height="916"
@@ -354,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
 
         </div>
-        
+
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -383,9 +355,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
         </div>
 
-    </section>   
-    
-   <!-- ===========================
+    </section>
+
+    <!-- ===========================
       About Section
 =========================== -->
 
@@ -417,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
 
     </section>
-    
+
     <!-- ===========================
       Why Choose Us
 =========================== -->
@@ -462,14 +434,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
     <section class="stats" data-aos="zoom-in">
 
-            <h2>Our Journey</h2>
+        <h2>Our Journey</h2>
 
-            <p>Together, we are building unforgettable travel experiences.</p>
+        <p>Together, we are building unforgettable travel experiences.</p>
 
-      <h2>Our Completed Group Trips</h2>
-        
-          <div class="trips">
-             <p>
+        <h2>Our Completed Group Trips</h2>
+
+        <div class="trips">
+            <p>
                 <a href="aanakatti-group-trip.html">
                     1.Aanakatti Group Trip
                 </a>
@@ -492,102 +464,102 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                     4.Marayoor Group Trip
                 </a>
             </p>
-          </div>
+        </div>
 
-            <div class="stats-container">
+        <div class="stats-container">
 
-                <div class="stat-box">
-                    <h3 class="counter" data-target="50">0</h3>
-                    <span>Members</span>
-                </div>
-
-                <div class="stat-box">
-                    <h3 class="counter" data-target="4">0</h3>
-                    <span>Trips Completed</span>
-                </div>
-
-                <div class="stat-box">
-                    <h3 class="counter" data-target="100">0</h3>
-                    <span>Happy Travelers</span>
-                </div>
-
-                <div class="stat-box">
-                    <h3 class="counter" data-target="24">0</h3>
-                    <span>Support</span>
-                </div>
-
+            <div class="stat-box">
+                <h3 class="counter" data-target="50">0</h3>
+                <span>Members</span>
             </div>
-        
+
+            <div class="stat-box">
+                <h3 class="counter" data-target="4">0</h3>
+                <span>Trips Completed</span>
+            </div>
+
+            <div class="stat-box">
+                <h3 class="counter" data-target="100">0</h3>
+                <span>Happy Travelers</span>
+            </div>
+
+            <div class="stat-box">
+                <h3 class="counter" data-target="24">0</h3>
+                <span>Support</span>
+            </div>
+
+        </div>
+
     </section>
 
     <!-- Upcoming Trip Section -->
-<section class="upcoming-trip" id="upcoming-trip">
+    <section class="upcoming-trip" id="upcoming-trip">
 
-    <div class="upcoming-trip-container">
+        <div class="upcoming-trip-container">
 
-        <h2>Our Next Group Trip</h2>
+            <h2>Our Next Group Trip</h2>
 
-        <h3>🏝️ Kasaragod Group Trip</h3>
+            <h3>🏝️ Kodaikanal Group Trip</h3>
 
-        <p class="trip-date">
-            October 2, 3 & 4, 2026
-        </p>
+            <p class="trip-date">
+                December 25, 26 & 27, 2026
+            </p>
 
-        <p>
-            Get ready to explore Kasaragod with Inaindha Kaigal.
-            Travel together, explore beautiful destinations and create
-            unforgettable memories.
-        </p>
+            <p>
+                Get ready to explore Kasaragod with Inaindha Kaigal.
+                Travel together, explore beautiful destinations and create
+                unforgettable memories.
+            </p>
 
-        <p class="upcoming-trip-price">
-    💰 Trip Amount: <strong>₹4,999</strong>
-    &nbsp; | &nbsp;
-    💳 Advance: <strong>₹2,500</strong>
-</p> <br>
-        
-<!-- <a href="#payment" class="payment-link">Payment Link</a> -->
-        
-        <div class="trip-countdown">
-            <h3>Trip Starts In</h3>
+            <p class="upcoming-trip-price">
+                💰 Trip Amount: <strong>₹4,900</strong>
+                &nbsp; | &nbsp;
+                💳 Advance: <strong>₹2,000</strong>
+            </p> <br>
 
-          <div id="countdown">
+            <!-- <a href="#payment" class="payment-link">Payment Links</a> -->
 
-    <div class="countdown-box">
-        <span id="days">00</span>
-        <small>Days</small>
-    </div>
+            <div class="trip-countdown">
+                <h3>Trip Starts In</h3>
 
-    <div class="countdown-box">
-        <span id="hours">00</span>
-        <small>Hours</small>
-    </div>
+                <div id="countdown">
 
-    <div class="countdown-box">
-        <span id="minutes">00</span>
-        <small>Minutes</small>
-    </div>
+                    <div class="countdown-box">
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
 
-    <div class="countdown-box">
-        <span id="seconds">00</span>
-        <small>Seconds</small>
-    </div>
+                    <div class="countdown-box">
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
 
-</div>
+                    <div class="countdown-box">
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="countdown-box">
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+
+                </div>
+            </div>
+
+            <a href="#booking" class="upcoming-trip-btn">
+                Book Your Trip
+            </a>
+
         </div>
 
-        <a href="#booking" class="upcoming-trip-btn">
-            Book Your Trip
-        </a>
+    </section>
 
-    </div>
-
-</section>
-
-      <!-- ===========================
+    <!-- ===========================
       Gallery
 =========================== -->
 
-    <section class="gallery" id="gallery" data-aos="fade-up">
+    <!-- <section class="gallery" id="gallery" data-aos="fade-up">
 
         <h2>Travel Gallery</h2>
 
@@ -595,7 +567,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
         <div class="gallery-container">
 
-             <img src="images/gallery1.webp" alt="Inaindha Kaigal group trip memories" loading="lazy">
+            <img src="images/gallery1.webp" alt="Inaindha Kaigal group trip memories" loading="lazy">
 
             <img src="images/gallery2.webp" alt="Inaindha Kaigal travelers enjoying a group trip" loading="lazy"
                 decoding="async">
@@ -612,7 +584,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
             <img src="images/gallery7.webp" alt="Inaindha Kaigal group tour memories" loading="lazy">
 
-           <img src="images/gallery8.webp" alt="Inaindha Kaigal travel group experience" loading="lazy">
+            <img src="images/gallery8.webp" alt="Inaindha Kaigal travel group experience" loading="lazy">
 
             <img src="images/gallery9.webp" alt="Inaindha Kaigal sightseeing trip" loading="lazy">
 
@@ -624,7 +596,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
         </div>
 
-    </section>
+    </section> -->
+
 
     <!-- Lightbox -->
 
@@ -694,7 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
 
     </section>
-    
+
     <!-- ===========================
       Booking Section
 =========================== -->
@@ -717,15 +690,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
                 <option value="">Select Destination</option>
 
-                <option>Kasaragod</option>
+                <option>Munnar</option>
 
-                <!-- <option>Ooty</option> -->
+                <option>Ooty</option>
 
-                <!-- <option>Kodaikanal</option> -->
+                <option>Kodaikanal</option>
 
-                <!-- <option>Valparai</option> -->
+                <option>Valparai</option>
 
-                <!-- <option>Goa</option> -->
+                <option>Goa</option>
 
             </select>
 
@@ -739,14 +712,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
         </form>
 
-         <p class="upcoming-trip-price">
-    💰 Trip Amount: <strong>₹4,999</strong>
-    &nbsp; | &nbsp;
-    💳 Advance: <strong>₹2,500</strong>
-</p> <br>
-        
-<a href="#payment" class="payment-link" style="font-size: x-large;">Payment Link</a>
-        
+        <p class="upcoming-trip-price">
+            💰 Trip Amount: <strong>₹4,999</strong>
+            &nbsp; | &nbsp;
+            💳 Advance: <strong>₹2,500</strong>
+        </p> <br>
+
+        <a href="#payment" class="payment-link" style="font-size: x-large;">Payment Links</a>
+
 
     </section>
 
@@ -754,8 +727,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       Payment
 =========================== -->
 
-<section class="payment" id="payment" data-aos="fade-left">
-    
+    <section class="payment" id="payment" data-aos="fade-left">
+
         <h2>Payment Details</h2>
 
         <p>Pay the advance amount to confirm your booking.</p>
@@ -764,12 +737,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
             <div class="payment-box">
 
-               <img src="images/qr-code-optimized.webp"
-     alt="UPI QR Code"
-     width="700"
-     height="971"
-     loading="lazy"
-     decoding="async">
+                <img src="images/qr-code-optimized.webp" alt="UPI QR Code" width="700" height="971" loading="lazy"
+                    decoding="async">
+
                 <h3>Scan & Pay</h3>
 
                 <p>Google Pay | PhonePe | Paytm</p>
@@ -780,11 +750,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
                 <h3>UPI Details</h3>
 
-                <p><strong>Name:</strong> Inaindha Kaigal(sathish selvaraj)</p>
+                <p><strong>Name:</strong>Inaindha Kaigal(sathish selvaraj)</p>
 
                 <p><strong>UPI ID:</strong>sathish.selvaraj1985@okaxis</p>
 
-                <p><strong>Advance:</strong> ₹2500</p>
+                <p><strong>Advance:</strong>₹2000</p>
 
                 <a href="https://wa.me/919500379744" class="pay-btn">
                     Send Payment Screenshot
@@ -914,7 +884,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
                 <p>Mani&nbsp;&nbsp;+91 8056404919</p>
 
-
             </div>
 
             <div class="contact-card">
@@ -923,7 +892,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
                 <p>sathish.selvaraj1985@gmail.com</p>
                 <p>m.dhanu1021@gmail.com</p>
-                 <p>Mani190601@gmail.com</p>
+                <p>Mani190601@gmail.com</p>
 
             </div>
 
@@ -943,27 +912,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
     </section>
 
-  <!-- ===========================
+    <!-- ===========================
      Location
 =========================== -->
 
-<section class="location" id="location">
+    <section class="location" id="location">
 
-    <h2>Our Location</h2>
+        <h2>Our Location</h2>
 
-    <p>Visit us or contact us anytime.</p>
+        <p>Visit us or contact us anytime.</p>
 
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31367.586248172614!2d76.99314951185622!3d10.661122526750713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba839d117dea505%3A0xb3fd96d9c8642659!2sPollachi%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1786429023615!5m2!1sen!2sin"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31367.586248172614!2d76.99314951185622!3d10.661122526750713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba839d117dea505%3A0xb3fd96d9c8642659!2sPollachi%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1786429023615!5m2!1sen!2sin"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
 
-</section>
+    </section>
 
     <footer>
 
@@ -1025,13 +990,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
                     <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
 
-                    <!-- <a href="#"><i class="fab fa-youtube"></i></a>     -->
+                    <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
 
                     <a href="https://wa.me/919500379744">
 
-                       <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
-    <path fill="currentColor" d="M16 3C8.8 3 3 8.6 3 15.5c0 2.5.8 4.9 2.2 6.9L3.8 29l6.8-1.8c1.7.9 3.6 1.3 5.4 1.3 7.2 0 13-5.6 13-12.5S23.2 3 16 3zm0 23.3c-1.7 0-3.4-.4-4.9-1.3l-.4-.2-4 1.1 1.1-3.9-.3-.4c-1.5-1.8-2.3-4-2.3-6.2C5.2 9.8 10 5.2 16 5.2s10.8 4.6 10.8 10.3S22 26.3 16 26.3zm6-7.8c-.3-.2-2-.9-2.3-1-.3-.1-.5-.2-.8.2-.2.3-.9 1-1.1 1.3-.2.2-.4.3-.7.1-2-.9-3.3-1.7-4.6-3.8-.3-.6.3-.6.9-1.8.1-.2.1-.4 0-.6-.1-.2-.8-1.8-1-2.4-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.2-.3-.5-.4-.8-.5z"/>
-</svg>
+                        <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M16 3C8.8 3 3 8.6 3 15.5c0 2.5.8 4.9 2.2 6.9L3.8 29l6.8-1.8c1.7.9 3.6 1.3 5.4 1.3 7.2 0 13-5.6 13-12.5S23.2 3 16 3zm0 23.3c-1.7 0-3.4-.4-4.9-1.3l-.4-.2-4 1.1 1.1-3.9-.3-.4c-1.5-1.8-2.3-4-2.3-6.2C5.2 9.8 10 5.2 16 5.2s10.8 4.6 10.8 10.3S22 26.3 16 26.3zm6-7.8c-.3-.2-2-.9-2.3-1-.3-.1-.5-.2-.8.2-.2.3-.9 1-1.1 1.3-.2.2-.4.3-.7.1-2-.9-3.3-1.7-4.6-3.8-.3-.6.3-.6.9-1.8.1-.2.1-.4 0-.6-.1-.2-.8-1.8-1-2.4-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.2-.3-.5-.4-.8-.5z" />
+                        </svg>
                     </a>
 
                 </div>
@@ -1050,12 +1016,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
     <a href="https://wa.me/919500379744" class="whatsapp" target="_blank" rel="noopener noreferrer">
 
-      <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
-    <path fill="currentColor" d="M16 3C8.8 3 3 8.6 3 15.5c0 2.5.8 4.9 2.2 6.9L3.8 29l6.8-1.8c1.7.9 3.6 1.3 5.4 1.3 7.2 0 13-5.6 13-12.5S23.2 3 16 3zm0 23.3c-1.7 0-3.4-.4-4.9-1.3l-.4-.2-4 1.1 1.1-3.9-.3-.4c-1.5-1.8-2.3-4-2.3-6.2C5.2 9.8 10 5.2 16 5.2s10.8 4.6 10.8 10.3S22 26.3 16 26.3zm6-7.8c-.3-.2-2-.9-2.3-1-.3-.1-.5-.2-.8.2-.2.3-.9 1-1.1 1.3-.2.2-.4.3-.7.1-2-.9-3.3-1.7-4.6-3.8-.3-.6.3-.6.9-1.8.1-.2.1-.4 0-.6-.1-.2-.8-1.8-1-2.4-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.2-.3-.5-.4-.8-.5z"/>
-</svg>
+        <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor"
+                d="M16 3C8.8 3 3 8.6 3 15.5c0 2.5.8 4.9 2.2 6.9L3.8 29l6.8-1.8c1.7.9 3.6 1.3 5.4 1.3 7.2 0 13-5.6 13-12.5S23.2 3 16 3zm0 23.3c-1.7 0-3.4-.4-4.9-1.3l-.4-.2-4 1.1 1.1-3.9-.3-.4c-1.5-1.8-2.3-4-2.3-6.2C5.2 9.8 10 5.2 16 5.2s10.8 4.6 10.8 10.3S22 26.3 16 26.3zm6-7.8c-.3-.2-2-.9-2.3-1-.3-.1-.5-.2-.8.2-.2.3-.9 1-1.1 1.3-.2.2-.4.3-.7.1-2-.9-3.3-1.7-4.6-3.8-.3-.6.3-.6.9-1.8.1-.2.1-.4 0-.6-.1-.2-.8-1.8-1-2.4-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.2-.3-.5-.4-.8-.5z" />
+        </svg>
+
     </a>
 
-  <button id="topBtn" aria-label="Back to top"></button>
+    <button id="topBtn" aria-label="Back to top"></button>
 
     <script src="script.js"></script>
 
@@ -1070,5 +1038,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </script>
 
 </body>
-<!-- fresh deploy -->
+
 </html>
