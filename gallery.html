@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Gallery | Inaindha Kaigal</title>
+    <meta name="description"
+        content="Explore travel memories from Aanakatti, Kasaragod and other trips with Inaindha Kaigal.">
+
+    <link rel="canonical" href="https://inaindhakaigal.in/gallery.html">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <header class="gallery-header">
+        <a href="index.html" class="logo">Inaindha Kaigal</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="gallery-hero">
+        <div class="gallery-title">
+            <!-- <p>TRAVEL TOGETHER • CREATE MEMORIES</p> -->
+            <!-- <h1>Our Travel Gallery</h1> -->
+            <!-- <span>Every trip has a story. Relive our memories.</span> -->
+        </div>
+    </section>
+
+    <main class="gallery-section">
+
+        <section id="tripHome">
+            <div class="section-heading">
+                <p>OUR JOURNEYS</p>
+                <h2>Oour Travel Gallery</h2>
+                <h2>Choose Your Trip</h2>
+                <span>Choose a trip to explore its memories</span>
+            </div>
+
+            <div class="trip-grid">
+                <article class="trip-card">
+                    <img src="images/kasaragod/kasaragod-poster.jpg.jpeg" alt="Kasaragod trip" loading="lazy">
+                    <div class="trip-content">
+                        <p>TRAVEL MEMORIES</p>
+                        <h3>Kasaragod Trip-5</h3>
+                        <button class="view-gallery" data-trip="kasaragod">
+                            View Gallery →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="trip-card">
+                    <img src="images/marayoor/marayoor-poster.png.png" alt="Inaindha Kaigal Marayoor Trip"
+                        loading="lazy">
+                    <div class="trip-content">
+                        <p>TRIP MEMORIES</p>
+                        <h3>Marayoor Trip-4</h3>
+                        <button class="view-gallery" data-trip="marayoor">
+                            View Gallery →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="trip-card">
+                    <img src="images/Marayoor-2/marayoor-2-poster.png.png" alt="Inaindha Kaigal Marayoor 2nd Trip"
+                        loading="lazy">
+                    <div class="trip-content">
+                        <p>TRIP MEMORIES • PART 2</p>
+                        <h3>Marayoor Trip(2)-3</h3>
+                        <button class="view-gallery" data-trip="marayoor2">
+                            View Gallery →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="trip-card">
+                    <img src="images/wayanad/wayanad-poster.png.png" alt="Inaindha Kaigal Wayanad Trip" loading="lazy">
+                    <div class="trip-content">
+                        <p>TRIP MEMORIES</p>
+                        <h3>Wayanad Trip-2</h3>
+                        <button class="view-gallery" data-trip="wayanad">
+                            View Gallery →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="trip-card">
+                    <img src="images/Trip-1/aanakatti-1.png" alt="Aanakatti friends group" loading="lazy">
+                    <div class="trip-content">
+                        <p>TRIP MEMORIES</p>
+                        <h3>Aanakatti Trip-1</h3>
+                        <button class="view-gallery" data-trip="aanakatti">
+                            View Gallery →
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="tripGallery" hidden>
+            <button id="backToTrips" class="back-button">
+                ← Back to Trips
+            </button>
+
+            <div class="section-heading">
+                <p id="tripEyebrow">TRIP MEMORIES</p>
+                <h2 id="tripTitle">Aanakatti Trip</h2>
+                <span id="tripDescription">Our travel memories</span>
+            </div>
+
+            <div id="galleryGrid" class="gallery-grid"></div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <button class="close-button" id="closeButton" aria-label="Close photo">&times;</button>
+        <button class="lightbox-nav" id="prevPhoto" aria-label="Previous photo">‹</button>
+        <img id="lightboxImage" src="" alt="Trip photograph">
+        <video id="lightboxVideo" controls playsinline hidden></video>
+        <button class="lightbox-nav" id="nextPhoto" aria-label="Next photo">›</button>
+        <p id="photoCounter" class="photo-counter"></p>
+    </div>
+
+    <footer>
+        <p>© 2026 Inaindha Kaigal. All Rights Reserved.</p>
+        <a href="index.html">Back to Home</a>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+
+</html>
