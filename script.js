@@ -362,7 +362,7 @@ window.addEventListener("scroll", () => {
 
 });
 /*====================================
-      TESTIMONIAL SLIDER
+      TESTIMONIA L SLIDER
 ====================================*/
 
 const testimonials = document.querySelectorAll(".testimonial");
@@ -394,7 +394,7 @@ if (testimonials.length > 0) {
 
 const countdownElement = document.getElementById("countdown");
 
-const tripDate = new Date("October 2, 2026 00:00:00").getTime();
+const tripDate = new Date("December 25, 2026 00:00:00").getTime();
 
 const countdownTimer = setInterval(function () {
 
@@ -419,10 +419,10 @@ const countdownTimer = setInterval(function () {
         1000
     );
 
-  document.getElementById("days").textContent = days;
-document.getElementById("hours").textContent = hours;
-document.getElementById("minutes").textContent = minutes;
-document.getElementById("seconds").textContent = seconds;
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds; 
 
     if (distance < 0) {
 
