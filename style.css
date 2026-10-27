@@ -2372,3 +2372,131 @@ body.dark .theme-btn {
 
 }
 
+/* ===== Customer Reviews Section ===== */
+.reviews-section {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #f0fdf4, #eff6ff);
+}
+
+.reviews-container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reviews-container h2 {
+    color: #123c2b;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 12px;
+}
+
+.reviews-subtitle {
+    color: #52665c;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.reviews-summary {
+    margin: 25px auto;
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+}
+
+.reviews-stars {
+    color: #f5a623;
+    font-size: 32px;
+    letter-spacing: 5px;
+}
+
+.reviews-summary p {
+    color: #52665c;
+    margin-bottom: 0;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.review-form label {
+    color: #123c2b;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #d4ded7;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #24352b;
+    font: inherit;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+    outline: 2px solid #198754;
+    border-color: #198754;
+}
+
+.review-form textarea {
+    resize: vertical;
+}
+
+.review-form button {
+    margin-top: 12px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #147d4b;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.review-form button:hover {
+    background: #0e6038;
+    transform: translateY(-1px);
+}
+
+#reviewMessageStatus {
+    margin: 0;
+    color: #147d4b;
+    text-align: center;
+}
+
+.approved-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .reviews-section {
+        padding: 45px 14px;
+    }
+
+    .review-form {
+        padding: 20px;
+    }
+}
+
+/* ===== End Customer Reviews Section ===== */
