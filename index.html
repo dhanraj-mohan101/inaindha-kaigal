@@ -506,13 +506,13 @@
             </p>
 
             <p>
-                Get ready to explore Kodaikanal Trip with Inaindha Kaigal.
+                Get ready to explore Kasaragod with Inaindha Kaigal.
                 Travel together, explore beautiful destinations and create
                 unforgettable memories.
             </p>
 
             <p class="upcoming-trip-price">
-                💰 Trip Amount: <strong>₹4,750</strong>
+                💰 Trip Amount: <strong>₹4,900</strong>
                 &nbsp; | &nbsp;
                 💳 Advance: <strong>₹2,000</strong>
             </p> <br>
@@ -608,65 +608,6 @@
         <img id="lightbox-img" src="" alt="">
 
     </div>
-
-    <!-- ===========================
-      Testimonials
-=========================== -->
-
-    <section class="testimonials" id="testimonials">
-
-        <h2>What Our Travelers Say</h2>
-
-        <p>Real experiences from our happy travelers.</p>
-
-        <div class="testimonial-slider">
-
-            <div class="testimonial active">
-
-                <img src="images/user1.webp" alt="Traveler" width="400" height="400" loading="lazy" decoding="async">
-
-                <p>
-                    "Amazing experience! Everything was perfectly organized.
-                    We really enjoyed the trip."
-                </p>
-
-                <h3>★★★★★</h3>
-
-                <span>Sathish</span>
-
-            </div>
-
-            <div class="testimonial">
-
-                <img src="images/user2.webp" alt="Traveler" width="400" height="300" loading="lazy" decoding="async">
-
-                <p>
-                    "Best travel community. Friendly members and wonderful memories."
-                </p>
-
-                <h3>★★★★★</h3>
-
-                <span>Dhanraj</span>
-
-            </div>
-
-            <div class="testimonial">
-
-                <img src="images/user3.webp" alt="Traveler" width="400" height="400" loading="lazy" decoding="async">
-                <p>
-                    "Affordable price with excellent service.
-                    Highly recommended!"
-                </p>
-
-                <h3>★★★★★</h3>
-
-                <span>Mani</span>
-
-            </div>
-
-        </div>
-
-    </section>
 
     <!-- ===========================
       Booking Section
@@ -768,7 +709,7 @@
 
     <!-- ===========================
      FAQ Section
-=========================== -->
+    ====================== -->
 
     <section class="faq" id="faq">
 
@@ -863,8 +804,109 @@
     </section>
 
     <!-- ===========================
+      Testimonials
+       ======================== -->
+
+    <section class="testimonials" id="testimonials">
+
+        <h2>What Our Travelers Say</h2>
+
+        <p>Real experiences from our happy travelers.</p>
+
+        <div class="testimonial-slider">
+
+            <div class="testimonial active">
+
+                <img src="images/user1.webp" alt="Traveler" width="400" height="400" loading="lazy" decoding="async">
+
+                <p>
+                    "Amazing experience! Everything was perfectly organized.
+                    We really enjoyed the trip."
+                </p>
+
+                <h3>★★★★★</h3>
+
+                <span>Sathish</span>
+
+            </div>
+
+            <div class="testimonial">
+
+                <img src="images/user2.webp" alt="Traveler" width="400" height="300" loading="lazy" decoding="async">
+
+                <p>
+                    "Best travel community. Friendly members and wonderful memories."
+                </p>
+
+                <h3>★★★★★</h3>
+
+                <span>Dhanraj</span>
+
+            </div>
+
+            <div class="testimonial">
+
+                <img src="images/user3.webp" alt="Traveler" width="400" height="400" loading="lazy" decoding="async">
+                <p>
+                    "Affordable price with excellent service.
+                    Highly recommended!"
+                </p>
+
+                <h3>★★★★★</h3>
+
+                <span>Mani</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="reviews-container">
+            <h2>⭐ Customer Reviews</h2>
+            <p class="reviews-subtitle">
+                Share your experience with Inaindha Kaigal
+            </p>
+
+            <div class="reviews-summary">
+                <div class="reviews-stars">★★★★★</div>
+                <p>Travel with us and share your feedback!</p>
+            </div>
+
+            <form id="reviewForm" class="review-form">
+                <label for="reviewName">Your Name</label>
+                <input type="text" id="reviewName" placeholder="Enter your name" maxlength="80" required>
+
+                <label for="reviewRating">Your Rating</label>
+                <select id="reviewRating" required>
+                    <option value="">Select stars</option>
+                    <option value="5">★★★★★ — Excellent</option>
+                    <option value="4">★★★★ — Very Good</option>
+                    <option value="3">★★★ — Good</option>
+                    <option value="2">★★ — Fair</option>
+                    <option value="1">★ — Poor</option>
+                </select>
+
+                <label for="reviewMessage">Your Review</label>
+                <textarea id="reviewMessage" placeholder="Tell us about your trip..." maxlength="1000" rows="4"
+                    required></textarea>
+
+                <button type="submit">Submit Review</button>
+                <p id="reviewMessageStatus" role="status"></p>
+            </form>
+
+            <div id="approvedReviews" class="approved-reviews">
+                <!-- Approved reviews will appear here -->
+            </div>
+        </div>
+    </section>
+    <!-- End Customer Reviews Section -->
+
+    <!-- ===========================
       Contact
-=========================== -->
+     ==================== -->
 
     <section class="contact" id="contact" data-aos="zoom-in">
 
@@ -1024,6 +1066,9 @@
     </a>
 
     <button id="topBtn" aria-label="Back to top"></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="reviews.js"></script>
 
     <script src="script.js"></script>
 
