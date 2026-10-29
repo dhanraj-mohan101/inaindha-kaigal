@@ -32,6 +32,14 @@ const trips = {
             {
                 src: "images/Trip-1/aanakatti-4.webp",
                 alt: "Aanakatti trip memories"
+            },
+             {
+                src: "images/Trip-1/aanakatti-5.jpg",
+                alt: "Aanakatti trip memories"
+            },
+            {
+                src: "images/Trip-1/aanakatti-6.jpg",
+                alt: "Aanakatti trip memories"
             }
         ]
     },
