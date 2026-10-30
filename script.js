@@ -394,7 +394,7 @@ if (testimonials.length > 0) {
 
 const countdownElement = document.getElementById("countdown");
 
-const tripDate = new Date("December 25, 2026 00:00:00").getTime();
+const tripDate = new Date("December 18, 2026 00:00:00").getTime();
 
 const countdownTimer = setInterval(function () {
 
