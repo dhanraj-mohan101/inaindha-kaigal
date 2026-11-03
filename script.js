@@ -394,7 +394,7 @@ if (testimonials.length > 0) {
 
 const countdownElement = document.getElementById("countdown");
 
-const tripDate = new Date("December 18, 2026 00:00:00").getTime();
+const tripDate = new Date("December 25, 2026 00:00:00").getTime();
 
 const countdownTimer = setInterval(function () {
 
@@ -422,7 +422,7 @@ const countdownTimer = setInterval(function () {
     document.getElementById("days").textContent = days;
     document.getElementById("hours").textContent = hours;
     document.getElementById("minutes").textContent = minutes;
-    document.getElementById("seconds").textContent = seconds; 
+    document.getElementById("seconds").textContent = seconds;
 
     if (distance < 0) {
 
@@ -433,3 +433,126 @@ const countdownTimer = setInterval(function () {
     }
 
 }, 1000);
+
+// /* ===========================
+//    Inaindha Kaigal Reviews
+//    Supabase Connection
+// =========================== */
+
+// const SUPABASE_URL = "YOUR_PROJECT_URL";
+// const SUPABASE_PUBLISHABLE_KEY = "YOUR_PUBLISHABLE_KEY";
+
+// const reviewForm = document.getElementById("reviewForm");
+// const approvedReviews = document.getElementById("approvedReviews");
+// const reviewStatus = document.getElementById("reviewMessageStatus");
+
+// async function loadApprovedReviews() {
+//     if (!approvedReviews) return;
+
+//     try {
+//         const response = await fetch(
+//             `${SUPABASE_URL}/rest/v1/reviews?select=customer_name,rating,review_text,created_at&status=eq.approved&order=created_at.desc`,
+//             {
+//                 headers: {
+//                     apikey: SUPABASE_PUBLISHABLE_KEY,
+//                     Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}`
+//                 }
+//             }
+//         );
+
+//         if (!response.ok) {
+//             throw new Error("Could not load reviews");
+//         }
+
+//         const reviews = await response.json();
+//         approvedReviews.replaceChildren();
+
+//         reviews.forEach(review => {
+//             const card = document.createElement("article");
+//             card.className = "review-card";
+
+//             const stars = document.createElement("div");
+//             stars.className = "reviews-stars";
+//             stars.textContent = "★".repeat(review.rating) +
+//                 "☆".repeat(5 - review.rating);
+
+//             const name = document.createElement("h3");
+//             name.textContent = review.customer_name;
+
+//             const message = document.createElement("p");
+//             message.textContent = review.review_text;
+
+//             card.append(stars, name, message);
+//             approvedReviews.appendChild(card);
+//         });
+
+//     } catch (error) {
+//         console.error("Review loading error:", error);
+//     }
+// }
+
+// if (reviewForm) {
+//     reviewForm.addEventListener("submit", async function (event) {
+//         event.preventDefault();
+
+//         if (reviewStatus) {
+//             reviewStatus.textContent = "Submitting your review...";
+//         }
+
+//         const customerName =
+//             document.getElementById("reviewName").value.trim();
+//         const rating =
+//             Number(document.getElementById("reviewRating").value);
+//         const reviewText =
+//             document.getElementById("reviewMessage").value.trim();
+
+//         if (!customerName || !reviewText || rating < 1 || rating > 5) {
+//             if (reviewStatus) {
+//                 reviewStatus.textContent = "Please complete all fields.";
+//             }
+//             return;
+//         }
+
+//         try {
+//             const response = await fetch(
+//                 `${SUPABASE_URL}/rest/v1/reviews`,
+//                 {
+//                     method: "POST",
+//                     headers: {
+//                         apikey: SUPABASE_PUBLISHABLE_KEY,
+//                         Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+//                         "Content-Type": "application/json",
+//                         Prefer: "return=minimal"
+//                     },
+//                     body: JSON.stringify({
+//                         customer_name: customerName,
+//                         rating: rating,
+//                         review_text: reviewText,
+//                         status: "pending"
+//                     })
+//                 }
+//             );
+
+//             if (!response.ok) {
+//                 throw new Error("Review submission failed");
+//             }
+
+//             reviewForm.reset();
+
+//             if (reviewStatus) {
+//                 reviewStatus.textContent =
+//                     "Thank you! Your review was submitted for approval.";
+//             }
+
+//         } catch (error) {
+//             console.error("Review submission error:", error);
+
+//             if (reviewStatus) {
+//                 reviewStatus.textContent =
+//                     "Unable to submit right now. Please try again later.";
+//             }
+//         }
+//     });
+// }
+
+// loadApprovedReviews();
