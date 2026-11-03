@@ -1,13 +1,14 @@
 /* ===========================
    Google Font & Reset
 =========================== */
-
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     /* outline:1px solid red;  */
+
 }
 
 html {
@@ -27,7 +28,6 @@ body {
 /* ===========================
    Header
 =========================== */
-
 header {
     position: fixed;
     top: 0;
@@ -41,7 +41,6 @@ header {
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
     z-index: 1000;
-
 }
 
 #about,
@@ -138,7 +137,6 @@ nav a:not(:last-of-type) {
 /* =========================
    HERO SECTION
 ========================= */
-
 .hero {
     position: relative;
     width: 100%;
@@ -149,7 +147,6 @@ nav a:not(:last-of-type) {
 /* =========================
    SLIDER
 ========================= */
-
 .slider {
     position: absolute;
     inset: 0;
@@ -198,7 +195,6 @@ nav a:not(:last-of-type) {
 /* =========================
    DARK OVERLAY
 ========================= */
-
 .overlay {
     position: absolute;
     inset: 0;
@@ -209,102 +205,72 @@ nav a:not(:last-of-type) {
 /* =========================
    HERO CONTENT
 ========================= */
-
 .hero-content {
     position: relative;
     z-index: 3;
-
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     color: #fff;
-
     padding: 120px 8% 60px;
 }
 
 /* Main Heading */
-
 .hero-content h1 {
     max-width: 1100px;
-
     font-size: 60px;
     line-height: 1.2;
-
     margin: 0 0 20px;
-
     font-weight: 700;
 }
 
 /* Sub Heading */
-
 .hero-content h2 {
     max-width: 900px;
-
     font-size: 30px;
     line-height: 1.4;
-
     margin: 0 0 20px;
-
     font-weight: 500;
 }
 
 /* Description */
-
 .hero-content p {
     max-width: 850px;
-
     font-size: 19px;
     line-height: 1.8;
-
     margin: 0 0 35px;
-
     color: #fff;
 }
 
 /* =========================
    HERO BUTTONS
 ========================= */
-
 .hero-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 20px;
-
     width: 100%;
 }
 
 /* Common Button */
-
 .hero-buttons a {
     display: inline-block;
-
     min-width: 210px;
-
     padding: 15px 30px;
-
     border-radius: 50px;
-
     text-decoration: none;
-
     color: #fff;
-
     font-size: 17px;
     font-weight: 600;
-
     text-align: center;
-
     transition: all 0.3s ease;
 }
 
 /* Book Button */
-
 .hero-buttons .btn {
     background: #0d6efd;
 }
@@ -315,7 +281,6 @@ nav a:not(:last-of-type) {
 }
 
 /* Gallery Button */
-
 .hero-buttons .btn2 {
     background: #25d366;
 }
@@ -325,13 +290,10 @@ nav a:not(:last-of-type) {
     transform: translateY(-3px);
 }
 
-
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
-
 @media (max-width: 768px) {
-
     .hero {
         min-height: 760px;
         height: auto;
@@ -348,88 +310,64 @@ nav a:not(:last-of-type) {
     .slide img {
         width: 100%;
         height: 100%;
-
         object-fit: cover;
         object-position: center;
     }
 
     /* Hero Content */
-
     .hero-content {
         min-height: 760px;
-
         justify-content: flex-start;
-
         padding: 180px 20px 60px;
     }
 
     /* Heading */
-
     .hero-content h1 {
         max-width: 100%;
-
         font-size: 34px;
         line-height: 1.25;
-
         margin-bottom: 15px;
     }
 
     /* Sub Heading */
-
     .hero-content h2 {
         max-width: 100%;
-
         font-size: 20px;
         line-height: 1.45;
-
         margin-bottom: 15px;
     }
 
     /* Description */
-
     .hero-content p {
         max-width: 100%;
-
         font-size: 15px;
         line-height: 1.7;
-
         margin-bottom: 30px;
     }
 
     /* Buttons */
-
     .hero-buttons {
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
-
         justify-content: center;
-
         gap: 15px;
-
         width: 100%;
     }
 
     .hero-buttons a {
         display: block;
-
         width: 240px;
         min-width: 240px;
-
         padding: 14px 20px;
-
         font-size: 16px;
     }
 }
-
 
 /* =========================
    SMALL MOBILE
 ========================= */
 @media (max-width: 480px) {
-
     .hero {
         min-height: 760px;
     }
@@ -458,15 +396,13 @@ nav a:not(:last-of-type) {
         width: 220px;
         min-width: 220px;
     }
-}
 
+}
 
 /* ===========================
    Responsive
 =========================== */
-
 @media(max-width:768px) {
-
     header {
         padding: 15px 20px;
     }
@@ -487,15 +423,12 @@ nav a:not(:last-of-type) {
     .menu {
         display: block;
     }
-
 }
 
 /* =========================
    MOBILE HERO OPTIMIZATION
 ========================= */
-
 @media (max-width: 768px) {
-
     .hero {
         min-height: 760px;
     }
@@ -537,55 +470,34 @@ nav a:not(:last-of-type) {
         padding: 13px 20px;
         font-size: 15px;
     }
+
 }
 
 /* Back To Top */
-
 #topBtn {
-
     position: fixed;
-
     right: 25px;
-
     bottom: 25px;
-
     width: 55px;
-
     height: 55px;
-
     border: none;
-
     border-radius: 50%;
-
     background: #0d6efd;
-
     color: white;
-
     font-size: 25px;
-
     cursor: pointer;
-
     display: none;
-
     box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
-
     transition: .3s;
-
     z-index: 9999;
-
 }
 
 #topBtn:hover {
-
     background: #198754;
-
 }
 
-
 /* Mobile Menu */
-
 @media (max-width:768px) {
-
     .menu {
         display: block;
         cursor: pointer;
@@ -625,14 +537,11 @@ nav a:not(:last-of-type) {
     .theme-btn {
         margin-top: 20px;
     }
-
 }
-
 
 /*==========================
       About
 ==========================*/
-
 .about {
     padding: 80px 8%;
     text-align: center;
@@ -655,7 +564,6 @@ nav a:not(:last-of-type) {
 /*==========================
       Why Choose Us
 ==========================*/
-
 .why-us {
     padding: 80px 8%;
     background: #f8f9fa;
@@ -699,7 +607,6 @@ nav a:not(:last-of-type) {
 /* ==========================
    Statistics Section
 ========================== */
-
 .stats {
     padding: 80px 8%;
     background: linear-gradient(135deg, #0d6efd, #00b894);
@@ -759,467 +666,283 @@ nav a:not(:last-of-type) {
 /*==========================
       Gallery
 ==========================*/
-
 .gallery {
-
     padding: 80px 8%;
-
     background: white;
-
     text-align: center;
-
 }
 
 .gallery h2 {
-
     font-size: 40px;
-
     color: #0d6efd;
-
     margin-bottom: 15px;
-
 }
 
 .gallery p {
-
     margin-bottom: 40px;
-
 }
 
 .gallery-container {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
     gap: 25px;
-
 }
 
 .gallery-container img {
-
     width: 100%;
-
     height: 260px;
-
     object-fit: cover;
-
     border-radius: 15px;
-
     cursor: pointer;
-
     transition: .4s;
-
     box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
-
 }
 
 .gallery-container img:hover {
-
     transform: scale(1.05);
-
 }
 
 /*==========================
       Lightbox
 ==========================*/
-
 #lightbox {
-
     position: fixed;
-
     top: 0;
-
     left: 0;
-
     width: 100%;
-
     height: 100%;
-
     display: none;
-
     justify-content: center;
-
     align-items: center;
-
     background: rgba(0, 0, 0, .9);
-
     z-index: 99999;
-
 }
 
 #lightbox img {
-
     max-width: 90%;
-
     max-height: 90%;
-
     border-radius: 15px;
-
 }
 
 #close {
-
     position: absolute;
-
     top: 30px;
-
     right: 40px;
-
     font-size: 45px;
-
     color: white;
-
     cursor: pointer;
-
 }
 
 /*====================================
         TESTIMONIAL SLIDER
 ====================================*/
-
 .testimonials {
-
     padding: 80px 8%;
-
     background: #f8f9fa;
-
     text-align: center;
-
 }
 
 .testimonials h2 {
-
     font-size: 40px;
-
     color: #0d6efd;
-
 }
 
 .testimonials p {
-
     margin-bottom: 40px;
-
 }
 
 .testimonial-slider {
-
     max-width: 700px;
-
     margin: auto;
-
     position: relative;
-
 }
 
 .testimonial {
-
     display: none;
-
     animation: fade .8s;
-
 }
 
 .testimonial.active {
-
     display: block;
-
 }
 
 .testimonial img {
-
     width: 200px;
-
     height: 200px;
-
     border-radius: 30%;
-
     object-fit: cover;
-
     margin-bottom: 20px;
-
     border: 5px solid #0d6efd;
-
 }
 
 .testimonial p {
-
     font-size: 18px;
-
     line-height: 1.8;
-
     color: #444;
-
     font-style: italic;
-
 }
 
 .testimonial h3 {
-
     color: #FFD700;
-
     margin-top: 20px;
-
     font-size: 28px;
-
 }
 
 .testimonial span {
-
     display: block;
-
     margin-top: 10px;
-
     color: #0d6efd;
-
     font-weight: bold;
-
 }
 
 @keyframes fade {
-
     from {
-
         opacity: 0;
-
         transform: translateY(30px);
-
     }
 
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
-
 }
 
 /*==========================
       Booking
 ==========================*/
-
 .booking {
-
     padding: 80px 8%;
-
     background: #f8f9fa;
-
     text-align: center;
-
 }
 
 .booking h2 {
-
     font-size: 40px;
-
     color: #0d6efd;
-
     margin-bottom: 15px;
-
 }
 
 .booking p {
-
     margin-bottom: 40px;
-
 }
 
 #bookingForm {
-
     max-width: 700px;
-
     margin: auto;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 20px;
-
 }
 
 #bookingForm input,
 #bookingForm textarea,
 #bookingForm select {
-
     padding: 15px;
-
     font-size: 16px;
-
     border: 2px solid #ddd;
-
     border-radius: 10px;
-
     outline: none;
-
 }
 
 #bookingForm input:focus,
 #bookingForm textarea:focus,
 #bookingForm select:focus {
-
     border-color: #0d6efd;
-
 }
 
 #bookingForm button {
-
     padding: 15px;
-
     border: none;
-
     background: #25D366;
-
     color: white;
-
     font-size: 18px;
-
     border-radius: 10px;
-
     cursor: pointer;
-
     transition: .3s;
-
 }
 
 #bookingForm button:hover {
-
     background: #128C7E;
-
 }
 
 /*==========================
       Contact
 ==========================*/
-
 .contact {
-
     padding: 80px 8%;
-
     background: white;
-
     text-align: center;
-
 }
 
 .contact h2 {
-
     font-size: 40px;
-
     color: #0d6efd;
-
     margin-bottom: 15px;
-
 }
 
 .contact p {
-
     margin-bottom: 30px;
-
 }
 
 .contact-box {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
     gap: 25px;
-
 }
 
 .contact-card {
-
     background: #f8c0fa;
-
     padding: 30px;
-
     border-radius: 15px;
-
     box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
-
     transition: .3s;
-
 }
 
 .contact-card:hover {
-
     transform: translateY(-10px);
-
 }
 
 .contact-card h3 {
-
     margin-bottom: 15px;
-
     color: #0d6efd;
-
 }
 
 /*==========================
       Payment
 ==========================*/
-
 .payment {
-
     padding: 80px 8%;
-
     background: #fff;
-
     text-align: center;
-
     color: #333;
-
 }
 
 .payment h2 {
-
     font-size: 40px;
-
     color: #0d6efd;
-
     margin-bottom: 15px;
-
 }
 
 .payment-container {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
     gap: 30px;
-
     margin-top: 40px;
     color: #0d6efd;
-
-
 }
 
 .payment-box {
-
     background: #d0e0f0;
-
     padding: 30px;
-
     border-radius: 15px;
-
     box-shadow: 0 10px 20px rgba(9, 9, 9, 0.1);
-
     color: #0a0202;
-
     line-height: 2.9;
-
 }
 
 .payment-box img {
-
     width: 220px;
-
     border-radius: 10px;
-
 }
 
 .payment-box img {
@@ -1233,26 +956,17 @@ nav a:not(:last-of-type) {
 
 .payment-container h3 {
     margin-bottom: 15px;
-
     color: #0d6efd;
 }
 
 .pay-btn {
-
     display: inline-block;
-
     margin-top: 20px;
-
     padding: 14px 28px;
-
     background: #25D366;
-
     color: #fff;
-
     text-decoration: none;
-
     border-radius: 30px;
-
 }
 
 @media (max-width: 768px) {
@@ -1265,82 +979,52 @@ nav a:not(:last-of-type) {
 /* ==========================
       Location
 ========================== */
-
 .location {
-
     padding: 80px 8%;
-
     background: #f8f9fa;
-
     text-align: center;
-
 }
 
 .location h2 {
-
     font-size: 40px;
-
     color: #0d6efd;
-
     margin-bottom: 15px;
-
 }
 
 .location p {
-
     margin-bottom: 30px;
-
     color: #555;
-
 }
 
 .location iframe {
-
     width: 100%;
-
     border-radius: 20px;
-
     box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
-
 }
 
 @media(max-width:768px) {
-
     .location iframe {
-
         height: 300px;
-
     }
-
 }
 
 /*====================================
             FOOTER
 ====================================*/
-
 footer {
-
     background: #0b1f3a;
-
     color: #fff;
-
     padding: 70px 8% 25px;
-
 }
 
 .footer-container {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
     gap: 30px;
     text-align: center;
-
 }
 
 .footer-box h3 {
-
     margin-bottom: 20px;
     color: #FFD700;
     font-size: 24px;
@@ -1349,7 +1033,6 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
 
 .footer-box p {
@@ -1362,82 +1045,50 @@ footer {
 }
 
 .footer-box a {
-
     display: block;
-
     color: #ddd;
-
     text-decoration: none;
-
     margin-bottom: 12px;
-
     transition: .3s;
-
 }
 
 .footer-box a:hover {
-
     color: #FFD700;
-
     padding-left: 8px;
-
 }
 
 .footer-social {
-
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-
 }
 
 .footer-social a {
-
     width: 45px;
-
     height: 45px;
-
     border-radius: 50%;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     background: #fff;
-
     color: #0d6efd;
-
     font-size: 20px;
-
     transition: .3s;
-
 }
 
 .footer-social a:hover {
-
     background: #FFD700;
-
     color: #000;
-
     transform: translateY(-5px);
-
 }
 
 .footer-bottom {
-
     text-align: center;
-
     margin-top: 50px;
-
     padding-top: 20px;
-
     border-top: 1px solid rgba(255, 255, 255, .2);
-
     color: #bbb;
-
 }
 
 .wa-icon {
@@ -1446,87 +1097,57 @@ footer {
     display: block;
 }
 
-
 /*==========================
       Floating WhatsApp
 ==========================*/
-
 .whatsapp {
-
     position: fixed;
-
     bottom: 100px;
-
     right: 25px;
-
     width: 60px;
-
     height: 60px;
-
     background: #25D366;
-
     border-radius: 50%;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     color: white;
-
     font-size: 32px;
-
     text-decoration: none;
-
     box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
-
     z-index: 999;
-
 }
 
 .whatsapp:hover {
-
     transform: scale(1.1);
-
 }
 
 /* Back To Top Button */
-
 #topBtn {
     display: none;
     position: fixed;
     bottom: 30px;
     right: 25px;
-
     width: 50px;
     height: 50px;
-
     border: none;
     border-radius: 50%;
-
     background: #ff1717;
     cursor: pointer;
-
     z-index: 99999;
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 /* Arrow */
 #topBtn::before {
     content: "";
-
     position: absolute;
     top: 19px;
     left: 17px;
-
     width: 14px;
     height: 14px;
-
     border-left: 4px solid white;
     border-top: 4px solid white;
-
     transform: rotate(45deg);
 }
 
@@ -1537,7 +1158,6 @@ footer {
 /* ==========================
       FAQ Section
 ========================== */
-
 .faq {
     padding: 80px 8%;
     background: #f8f9fa;
@@ -1596,59 +1216,40 @@ footer {
 /* ==========================
       Theme Button
 ========================== */
-
 .theme-btn {
-
     width: 45px;
     height: 45px;
-
     border: none;
     border-radius: 50%;
-
     cursor: pointer;
-
     background: #0d6efd;
     color: #fff;
-
     font-size: 20px;
-
     transition: .3s;
-
 }
 
 .theme-btn:hover {
-
     transform: rotate(180deg);
-
 }
 
 /* ==========================
       Dark Mode
 ========================== */
-
 body.dark {
-
     background: #121212;
     color: #ffffff;
-
 }
 
 body.dark header {
-
     background: #1f1f1f;
-
 }
 
 body.dark nav {
-
     background: #1f1f1f;
-
 }
 
 body.dark nav a {
-
     color: #ffffff;
-
 }
 
 body.dark .about,
@@ -1660,10 +1261,8 @@ body.dark .faq,
 body.dark .booking,
 body.dark .contact,
 body.dark footer {
-
     background: #1e1e1e;
     color: #ffffff;
-
 }
 
 body.dark .feature,
@@ -1671,74 +1270,50 @@ body.dark .stat-box,
 body.dark .payment-box,
 body.dark .contact-card,
 body.dark .faq-answer {
-
     background: #2b2b2b;
     color: #ffffff;
-
 }
 
 body.dark .booking-form input,
 body.dark .booking-form textarea,
 body.dark .booking-form select {
-
     background: #2c2c2c;
     color: #fff;
     border: 1px solid #444;
-
 }
 
 body.dark .theme-btn {
-
     background: #FFD700;
     color: #000;
-
 }
 
 /*====================================
         WEBSITE LOADER
 ====================================*/
-
 #loader {
-
     position: fixed;
-
     inset: 0;
-
     background: #ffffff;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     z-index: 99999;
-
     transition: opacity .3s ease,
         visibility .3s ease;
-
 }
 
 #loader.hide {
-
     opacity: 0;
-
     visibility: hidden;
-
 }
 
 .loader-box {
-
     text-align: center;
-
 }
 
 .loader-box img {
-
     width: 120px;
-
     margin-bottom: 25px;
-
 }
 
 .loader-box h2 {
@@ -1746,53 +1321,34 @@ body.dark .theme-btn {
 }
 
 .spinner {
-
     width: 65px;
-
     height: 65px;
-
     margin: auto;
-
     border: 6px solid #ddd;
-
     border-top: 6px solid #0d6efd;
-
     border-radius: 50%;
-
     animation: spin 1s linear infinite;
-
 }
 
 .loader-box h3 {
-
     margin-top: 25px;
-
     color: #0d6efd;
-
     font-size: 22px;
-
     letter-spacing: 1px;
-
 }
 
 @keyframes spin {
-
     100% {
-
         transform: rotate(360deg);
-
     }
-
 }
 
 /* ===================================
    Contact & Payment Responsive
 =================================== */
-
 @media (max-width: 768px) {
 
     /* Contact */
-
     .contact {
         padding: 60px 20px;
     }
@@ -1820,7 +1376,6 @@ body.dark .theme-btn {
     }
 
     /* Payment */
-
     .payment {
         padding: 60px 20px;
     }
@@ -1866,61 +1421,40 @@ body.dark .theme-btn {
         display: block;
         text-align: center;
     }
-
 }
 
 @media(max-width:768px) {
-
     .footer-container {
-
         grid-template-columns: 1fr;
-
         text-align: center;
-
     }
 
     .footer-social {
-
         justify-content: center;
-
     }
 
     .footer-box a:hover {
-
         padding-left: 0;
-
     }
-
 }
 
 /*====================================
       Scroll Progress Bar
 ====================================*/
-
 #progress-bar {
-
     position: fixed;
-
     top: 0;
-
     left: 0;
-
     width: 0%;
-
     height: 4px;
-
     background: linear-gradient(90deg, #0d6efd, #25D366);
-
     z-index: 99999;
-
     transition: width .1s linear;
-
 }
 
 /* =========================
    WAYANAD TRIP PAGE
 ========================= */
-
 .trip-page-header {
     display: flex;
     justify-content: space-between;
@@ -1939,6 +1473,7 @@ body.dark .theme-btn {
     font-weight: 600;
     color: #222;
 }
+
 
 .trip-hero {
     min-height: 70vh;
@@ -1987,7 +1522,6 @@ body.dark .theme-btn {
 }
 
 @media (max-width: 768px) {
-
     .trip-page-header {
         padding: 10px 20px;
     }
@@ -2018,7 +1552,6 @@ body.dark .theme-btn {
 }
 
 /* Wayanad Trip About Section */
-
 .trip-about {
     padding: 70px 20px;
     background: #ffffff;
@@ -2042,7 +1575,6 @@ body.dark .theme-btn {
 }
 
 @media (max-width: 768px) {
-
     .trip-about {
         padding: 45px 20px;
     }
@@ -2057,7 +1589,6 @@ body.dark .theme-btn {
 }
 
 /* Wayanad Trip Gallery */
-
 .trip-gallery {
     padding: 70px 20px;
 }
@@ -2088,7 +1619,6 @@ body.dark .theme-btn {
 }
 
 @media (max-width: 768px) {
-
     .trip-gallery {
         padding: 45px 20px;
     }
@@ -2103,7 +1633,6 @@ body.dark .theme-btn {
 }
 
 /* Wayanad Trip Highlights */
-
 .trip-highlights {
     padding: 70px 20px;
     background: #f7f7f7;
@@ -2149,7 +1678,6 @@ body.dark .theme-btn {
 /* =========================
    TRIP PAGE CTA
 ========================= */
-
 .trip-cta {
     padding: 70px 20px;
     text-align: center;
@@ -2186,7 +1714,6 @@ body.dark .theme-btn {
 }
 
 /* Trip Page Footer */
-
 .trip-footer {
     padding: 20px;
     text-align: center;
@@ -2195,7 +1722,6 @@ body.dark .theme-btn {
 }
 
 @media (max-width: 768px) {
-
     .trip-cta {
         padding: 45px 20px;
     }
@@ -2213,7 +1739,6 @@ body.dark .theme-btn {
 }
 
 /* Aanakatti Hero Image */
-
 .aanakatti-hero {
     background:
         linear-gradient(rgba(0, 0, 0, 0.55),
@@ -2222,7 +1747,6 @@ body.dark .theme-btn {
 }
 
 /* Marayoor Hero Image */
-
 .marayoor-hero {
     background:
         linear-gradient(rgba(0, 0, 0, 0.55),
@@ -2231,7 +1755,6 @@ body.dark .theme-btn {
 }
 
 /* Kanthaloor Hero Image */
-
 .kanthaloor-hero {
     background:
         linear-gradient(rgba(0, 0, 0, 0.55),
@@ -2242,7 +1765,6 @@ body.dark .theme-btn {
 /* =========================
    UPCOMING TRIP SECTION
 ========================= */
-
 .upcoming-trip {
     padding: 70px 20px;
     background: #f7f7f7;
@@ -2345,9 +1867,7 @@ body.dark .theme-btn {
 }
 
 /* Mobile */
-
 @media (max-width: 768px) {
-
     .upcoming-trip {
         padding: 45px 20px;
     }
@@ -2390,7 +1910,6 @@ body.dark .theme-btn {
 }
 
 @media (max-width: 768px) {
-
     .upcoming-nav {
         position: static;
         display: block;
@@ -2400,10 +1919,11 @@ body.dark .theme-btn {
         margin: 8px 0;
         font-size: 17px;
     }
-
 }
 
-/* ===== Customer Reviews Section ===== */
+/* =====================================
+   CUSTOMER REVIEWS SECTION
+===================================== */
 .reviews-section {
     padding: 70px 20px;
     background: linear-gradient(135deg, #f0fdf4, #eff6ff);
@@ -2427,6 +1947,7 @@ body.dark .theme-btn {
     margin-bottom: 28px;
 }
 
+/* Reviews Summary */
 .reviews-summary {
     margin: 25px auto;
     padding: 22px;
@@ -2446,6 +1967,7 @@ body.dark .theme-btn {
     margin-bottom: 0;
 }
 
+/* Review Form */
 .review-form {
     display: flex;
     flex-direction: column;
@@ -2513,21 +2035,337 @@ body.dark .theme-btn {
     text-align: center;
 }
 
-.approved-reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 18px;
-    margin-top: 30px;
+#customer p {
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    color: #128C7E;
 }
 
+/* =========================================
+   REVIEWS LAYOUT
+========================================= */
+.reviews-layout {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto 0;
+}
+
+.approved-reviews {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* =========================================
+   PREVIOUS / NEXT NAVIGATION
+========================================= */
+.reviews-arrow {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #147d4b;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.reviews-arrow:hover {
+    background: #0e6038;
+    transform: scale(1.08);
+}
+
+.reviews-arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================================
+   REVIEW CARD
+========================================= */
+.review-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 180px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+/* =========================================
+   REVIEW HEADER
+   NAME TOP / STARS + ARROW BELOW
+========================================= */
+.review-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "name name"
+        "stars arrow";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 18px 10px;
+    width: 100%;
+    min-height: 150px;
+    box-sizing: border-box;
+    padding: 25px 15px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    font: inherit;
+    transition: background 0.3s ease;
+}
+
+.review-header:hover {
+    background: #f5f8ff;
+}
+
+.review-header:focus-visible {
+    outline: 2px solid #0d6efd;
+    outline-offset: -3px;
+}
+
+/* Customer Name */
+.review-name {
+    grid-area: name;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    color: #222;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/* Star Rating */
+.review-stars {
+    grid-area: stars;
+    color: #f5a623;
+    font-size: 22px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+/* Dropdown Arrow */
+.review-arrow {
+    grid-area: arrow;
+    color: #0d6efd;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+/* =========================================
+   REVIEW MESSAGE
+========================================= */
+.review-message[hidden] {
+    display: none !important;
+}
+
+.review-message:not([hidden]) {
+    display: block;
+    padding: 0 20px 18px;
+    border-top: 1px solid #eee;
+    color: #555;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.review-message p {
+    margin: 12px 0 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Keep Review Cards Independent */
+.approved-reviews {
+    align-items: start;
+}
+
+.review-card {
+    align-self: start;
+    height: auto;
+    min-height: 160px;
+}
+
+/* Keep Name, Stars and Arrow in Position */
+.review-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "name name"
+        "stars arrow";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 12px 10px;
+}
+
+/* Expanded Message */
+.review-message:not([hidden]) {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* =========================================
+   TABLET - 2 COLUMNS
+========================================= */
+@media (min-width: 601px) and (max-width: 900px) {
+    .approved-reviews {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .review-name {
+        font-size: 18px;
+    }
+
+    .review-card {
+        min-height: 180px;
+    }
+}
+
+/* =========================================
+   MOBILE - ONE REVIEW
+======================================== */
 @media (max-width: 600px) {
     .reviews-section {
         padding: 45px 14px;
     }
 
+    .reviews-container h2 {
+        font-size: 28px;
+    }
+
+    .reviews-subtitle {
+        font-size: 14px;
+    }
+
+    .reviews-summary {
+        padding: 18px;
+    }
+
+    .reviews-stars {
+        font-size: 26px;
+    }
+
     .review-form {
         padding: 20px;
     }
+
+    /* Side Navigation */
+    .reviews-layout {
+        grid-template-columns: 30px minmax(0, 1fr) 30px;
+        gap: 6px;
+        margin-top: 25px;
+    }
+
+    /* Single Column */
+    .approved-reviews {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    /* Mobile Card */
+    .review-card {
+        min-height: 190px;
+        border-radius: 18px;
+    }
+
+    .review-header {
+        min-height: 175px;
+        gap: 20px 8px;
+        padding: 25px 12px;
+    }
+
+    .review-name {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .review-stars {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .review-arrow {
+        font-size: 23px;
+    }
+
+    .reviews-arrow {
+        width: 30px;
+        height: 36px;
+        font-size: 19px;
+    }
+
+    .review-message:not([hidden]) {
+        padding: 0 15px 18px;
+        text-align: center;
+    }
+
+    .review-message p {
+        font-size: 14px;
+    }
 }
 
-/* ===== End Customer Reviews Section ===== */
+/* Dark Mode */
+body.dark .reviews-section {
+    background: linear-gradient(135deg, #17251e, #172235);
+}
+
+body.dark .reviews-container h2,
+body.dark .reviews-subtitle {
+    color: #ffffff;
+}
+
+body.dark .reviews-summary,
+body.dark .review-form,
+body.dark .review-card {
+    background: #252525;
+    color: #ffffff;
+}
+
+body.dark .reviews-summary p,
+body.dark .review-form label,
+body.dark .review-name,
+body.dark .review-message p {
+    color: #eeeeee;
+}
+
+body.dark .review-form input,
+body.dark .review-form select,
+body.dark .review-form textarea {
+    background: #333333;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+body.dark .review-header:hover {
+    background: #333333;
+}
+
+body.dark .review-message:not([hidden]) {
+    border-top-color: #444444;
+}
