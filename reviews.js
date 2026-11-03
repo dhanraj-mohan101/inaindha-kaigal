@@ -1,8 +1,10 @@
+
 // ===================================
 // INAIN DHA KAIGAL - CUSTOMER REVIEWS
 // ===================================
 
 const SUPABASE_URL = "https://heotjgiukyawvjqolhql.supabase.co";
+
 const SUPABASE_ANON_KEY = "sb_publishable_YujDVA2YC1SRZ2qnOu5Y-A_m4eRNDKY";
 
 const supabaseClient = window.supabase.createClient(
@@ -14,8 +16,39 @@ const reviewForm = document.getElementById("reviewForm");
 const reviewStatus = document.getElementById("reviewMessageStatus");
 const approvedReviews = document.getElementById("approvedReviews");
 
-// Load approved reviews
+const prevButton = document.getElementById("reviewsPrev");
+const nextButton = document.getElementById("reviewsNext");
+
+let currentReviewPage = 0;
+let allApprovedReviews = [];
+
+
+// ===================================
+// RESPONSIVE REVIEWS PER PAGE
+// ===================================
+
+function getReviewsPerPage() {
+
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 600) {
+        return 1; // Mobile
+    }
+
+    if (screenWidth <= 900) {
+        return 4; // Tablet
+    }
+
+    return 6; // Desktop
+}
+
+
+// ===================================
+// LOAD APPROVED REVIEWS
+// ===================================
+
 async function loadApprovedReviews() {
+
     if (!approvedReviews) return;
 
     const { data, error } = await supabaseClient
@@ -25,34 +58,282 @@ async function loadApprovedReviews() {
         .order("created_at", { ascending: false });
 
     if (error) {
+
         console.error("Could not load reviews:", error.message);
+
+        approvedReviews.textContent = "Unable to load reviews.";
+
         return;
     }
 
-    approvedReviews.replaceChildren();
+    allApprovedReviews = data || [];
 
-    data.forEach(review => {
-        const card = document.createElement("div");
-        card.className = "review-card";
+    currentReviewPage = 0;
 
-        const stars = document.createElement("p");
-        stars.textContent = "★".repeat(review.rating) +
-            "☆".repeat(5 - review.rating);
-
-        const name = document.createElement("h4");
-        name.textContent = review.customer_name;
-
-        const message = document.createElement("p");
-        message.textContent = review.review_text;
-
-        card.append(stars, name, message);
-        approvedReviews.appendChild(card);
-    });
+    renderApprovedReviews();
 }
 
-// Submit review for approval
+// ===================================
+// DISPLAY REVIEWS
+// ===================================
+
+function renderApprovedReviews() {
+
+    if (!approvedReviews) return;
+
+    approvedReviews.replaceChildren();
+
+    const reviewsPerPage = getReviewsPerPage();
+
+    const totalPages = Math.ceil(
+        allApprovedReviews.length / reviewsPerPage
+    );
+
+    currentReviewPage = Math.max(
+        0,
+        Math.min(currentReviewPage, totalPages - 1)
+    );
+
+    // No approved reviews
+
+    if (allApprovedReviews.length === 0) {
+
+        const emptyMessage = document.createElement("p");
+
+        emptyMessage.textContent =
+            "No reviews yet. Be the first to share your experience!";
+
+        approvedReviews.appendChild(emptyMessage);
+
+        updateReviewArrows();
+
+        return;
+    }
+
+    const startIndex = currentReviewPage * reviewsPerPage;
+
+    const pageReviews = allApprovedReviews.slice(
+        startIndex,
+        startIndex + reviewsPerPage
+    );
+
+    pageReviews.forEach(review => {
+
+        // Review Card
+
+        const card = document.createElement("div");
+
+        card.className = "review-card";
+
+        // Review Header Button
+
+        const header = document.createElement("button");
+
+        header.type = "button";
+        header.className = "review-header";
+        header.setAttribute("aria-expanded", "false");
+
+        // Customer Name
+
+        const name = document.createElement("span");
+
+        name.className = "review-name";
+
+        name.textContent = review.customer_name || "Customer";
+
+        // Star Rating
+
+        const stars = document.createElement("span");
+
+        stars.className = "review-stars";
+
+        const rating = Math.max(
+            0,
+            Math.min(5, Number(review.rating) || 0)
+        );
+
+        stars.textContent =
+            "★".repeat(rating) + "☆".repeat(5 - rating);
+
+        // Dropdown Arrow
+
+        const arrow = document.createElement("span");
+
+        arrow.className = "review-arrow";
+
+        arrow.textContent = "⌄";
+
+        // Append Header Elements
+
+        header.append(name, stars, arrow);
+
+        // Review Message
+
+        const message = document.createElement("div");
+
+        message.className = "review-message";
+
+        message.hidden = true;
+
+        const messageText = document.createElement("p");
+
+        messageText.textContent = review.review_text || "";
+
+        message.appendChild(messageText);
+
+        // Expand / Collapse Review
+
+        header.addEventListener("click", () => {
+
+            const isOpen =
+                header.getAttribute("aria-expanded") === "true";
+
+            // Close all other reviews
+
+            approvedReviews
+                .querySelectorAll(".review-header")
+                .forEach(item => {
+
+                    item.setAttribute("aria-expanded", "false");
+
+                    const itemArrow =
+                        item.querySelector(".review-arrow");
+
+                    if (itemArrow) {
+                        itemArrow.textContent = "⌄";
+                    }
+
+                    if (item.nextElementSibling) {
+                        item.nextElementSibling.hidden = true;
+                    }
+                });
+
+            // Open selected review
+
+            if (!isOpen) {
+
+                header.setAttribute("aria-expanded", "true");
+
+                arrow.textContent = "⌃";
+
+                message.hidden = false;
+            }
+
+        });
+
+        card.append(header, message);
+
+        approvedReviews.appendChild(card);
+
+    });
+
+    updateReviewArrows();
+}
+
+// ===================================
+// UPDATE PREVIOUS / NEXT ARROWS
+// ===================================
+
+function updateReviewArrows() {
+
+    const reviewsPerPage = getReviewsPerPage();
+
+    const totalPages = Math.ceil(
+        allApprovedReviews.length / reviewsPerPage
+    );
+
+    if (prevButton) {
+        prevButton.disabled = currentReviewPage <= 0;
+    }
+
+    if (nextButton) {
+        nextButton.disabled =
+            currentReviewPage >= totalPages - 1;
+    }
+}
+
+// ===================================
+// PREVIOUS BUTTON
+// ===================================
+
+if (prevButton) {
+
+    prevButton.addEventListener("click", () => {
+
+        if (currentReviewPage > 0) {
+
+            currentReviewPage--;
+
+            renderApprovedReviews();
+        }
+
+    });
+
+}
+
+// ===================================
+// NEXT BUTTON
+// ===================================
+
+if (nextButton) {
+
+    nextButton.addEventListener("click", () => {
+
+        const totalPages = Math.ceil(
+            allApprovedReviews.length / getReviewsPerPage()
+        );
+
+        if (currentReviewPage < totalPages - 1) {
+
+            currentReviewPage++;
+
+            renderApprovedReviews();
+        }
+
+    });
+
+}
+
+
+// ===================================
+// RESPONSIVE SCREEN SIZE CHANGE
+// ===================================
+
+let previousReviewsPerPage = getReviewsPerPage();
+
+window.addEventListener("resize", () => {
+
+    const newReviewsPerPage = getReviewsPerPage();
+
+    // Re-render only when layout category changes
+
+    if (newReviewsPerPage !== previousReviewsPerPage) {
+
+        const oldStartIndex =
+            currentReviewPage * previousReviewsPerPage;
+
+        previousReviewsPerPage = newReviewsPerPage;
+
+        // Keep the current review position as closely as possible
+
+        currentReviewPage = Math.floor(
+            oldStartIndex / newReviewsPerPage
+        );
+
+        renderApprovedReviews();
+    }
+
+});
+
+
+// ===================================
+// SUBMIT REVIEW
+// ===================================
+
 if (reviewForm) {
+
     reviewForm.addEventListener("submit", async function (event) {
+
         event.preventDefault();
 
         if (reviewStatus) {
@@ -60,18 +341,26 @@ if (reviewForm) {
         }
 
         const customerName =
-            document.getElementById("reviewName").value.trim();
+            document.getElementById("reviewName")?.value.trim();
 
         const rating =
-            Number(document.getElementById("reviewRating").value);
+            Number(document.getElementById("reviewRating")?.value);
 
         const reviewText =
-            document.getElementById("reviewMessage").value.trim();
+            document.getElementById("reviewMessage")?.value.trim();
 
-        if (!customerName || !reviewText || rating < 1 || rating > 5) {
+        if (
+            !customerName ||
+            !reviewText ||
+            !Number.isInteger(rating) ||
+            rating < 1 ||
+            rating > 5
+        ) {
+
             if (reviewStatus) {
                 reviewStatus.textContent = "Please fill in all fields.";
             }
+
             return;
         }
 
@@ -85,11 +374,14 @@ if (reviewForm) {
             });
 
         if (error) {
-            console.error(error);
+
+            console.error("Review submission error:", error);
+
             if (reviewStatus) {
                 reviewStatus.textContent =
                     "Review could not be submitted. Please try again.";
             }
+
             return;
         }
 
@@ -99,7 +391,13 @@ if (reviewForm) {
             reviewStatus.textContent =
                 "Thank you! Your review will appear after approval.";
         }
+
     });
+
 }
+
+// ===================================
+// INITIALIZE
+// ===================================
 
 loadApprovedReviews();
