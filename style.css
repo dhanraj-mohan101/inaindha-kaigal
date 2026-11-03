@@ -2106,7 +2106,8 @@ body.dark .theme-btn {
 }
 
 .review-card:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
 }
 
 /* =========================================
