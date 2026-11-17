@@ -2,13 +2,11 @@
    Google Font & Reset
 =========================== */
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     /* outline:1px solid red;  */
-
 }
 
 html {
@@ -396,7 +394,6 @@ nav a:not(:last-of-type) {
         width: 220px;
         min-width: 220px;
     }
-
 }
 
 /* ===========================
@@ -470,7 +467,6 @@ nav a:not(:last-of-type) {
         padding: 13px 20px;
         font-size: 15px;
     }
-
 }
 
 /* Back To Top */
@@ -1282,6 +1278,10 @@ body.dark .booking-form select {
     border: 1px solid #444;
 }
 
+body.dark .faq-answer p {
+    color: #ffffff;
+}
+
 body.dark .theme-btn {
     background: #FFD700;
     color: #000;
@@ -1473,7 +1473,6 @@ body.dark .theme-btn {
     font-weight: 600;
     color: #222;
 }
-
 
 .trip-hero {
     min-height: 70vh;
@@ -2095,11 +2094,11 @@ body.dark .theme-btn {
 .review-card {
     width: 100%;
     min-width: 0;
-    min-height: 180px;
+    min-height: 175px;
     box-sizing: border-box;
     background: #fff;
     border: 1px solid #e5e7eb;
-    border-radius: 22px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
     transition: box-shadow 0.3s ease;
@@ -2369,4 +2368,45 @@ body.dark .review-header:hover {
 
 body.dark .review-message:not([hidden]) {
     border-top-color: #444444;
+}
+
+/* =====================================
+   UPCOMING TRIP - DARK MODE
+===================================== */
+body.dark .upcoming-trip {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark .upcoming-trip h2,
+body.dark .upcoming-trip h3,
+body.dark .upcoming-trip p,
+body.dark .upcoming-trip .trip-date {
+    color: #ffffff;
+}
+
+body.dark .countdown-box,
+body.dark .upcoming-trip-price {
+    background: #2b2b2b;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .countdown-box span,
+body.dark .countdown-box small,
+body.dark .upcoming-trip-price strong {
+    color: #ffffff;
+}
+
+body.dark .countdown-box:hover {
+    background: #3a3a3a;
+}
+
+body.dark .upcoming-trip-btn {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark .upcoming-trip-btn:hover {
+    background: #0b5ed7;
 }
