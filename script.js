@@ -13,6 +13,7 @@ window.addEventListener("scroll", function () {
     }
 
 });
+
 /* ===========================
    Mobile Menu
 =========================== */
@@ -21,10 +22,30 @@ const menu = document.querySelector(".menu");
 const nav = document.querySelector("header nav");
 
 if (menu && nav) {
+
     menu.addEventListener("click", () => {
         nav.classList.toggle("active");
+
+        // Update accessibility status
+        const isOpen = nav.classList.contains("active");
+        menu.setAttribute("aria-expanded", isOpen);
+        menu.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
     });
+
+    // Close menu after clicking a navigation link
+    nav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+            menu.setAttribute("aria-expanded", "false");
+            menu.setAttribute("aria-label", "Open navigation menu");
+        });
+    });
+
 }
+
 /* ===========================
    HERO SLIDER
 =========================== */
